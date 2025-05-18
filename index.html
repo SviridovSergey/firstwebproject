@@ -109,7 +109,7 @@
         <section id="portfolio" class="tab-content">
             <h1>Портфолио</h1>
             <p>Каждая карта уникальна. Над каждым дизайном трудится команда настоящих профессионалов.</p>
-            <div class="portfolio-tabs">
+            <div class="portfolio-tabs" style="display: flex; justify-content: center;">
                 <button onclick="showPortfolio('discount')">Дисконтные</button>
                 <button onclick="showPortfolio('bonus')">Бонусные</button>
                 <button onclick="showPortfolio('tables')">Таблички</button>
@@ -326,31 +326,23 @@
                     <tbody>
                         <!-- Вторая группа цен -->
                         <tr>
-                            <td>A4 (210x297)</td>
-                            <td>500 ₽</td>
+                            <td>A4 (210x297) - 500₽</td>
+                            <td>1000 ₽</td>
                         </tr>
                         <tr>
-                            <td>A5 (148x210)</td>
-                            <td>280 ₽</td>
+                            <td>A5 (148x210) - 280 ₽</td>
                         </tr>
                         <tr>
-                            <td>A6 (105x148)</td>
-                            <td>140 ₽</td>
+                            <td>A6 (105x148) - 140 ₽</td>
                         </tr>
                         <tr>
-                            <td>A7 (74x105)</td>
-                            <td>85 ₽</td>
+                            <td>A7 (74x105) - 85 ₽</td>
                         </tr>
                     </tbody>
                 </table>
 
-                <!-- Кнопка "Рассчитать стоимость" -->
-                <button class="calculate-btn"><i class="fas fa-calculator"></i> Рассчитать стоимость</button>
             </div>
-
-            <button class="calculate-btn"><i class="fas fa-calculator"></i> Рассчитать стоимость</button>
-
-            <div class="notes">
+            <div class="notes" style="display: flex; justify-content: space-between;">
                 <div class="note">
                     <i class="fas fa-info-circle"></i>
                     <p>Дизайн - 700 р., или печать по вашему макету<br>Покрытие: матовое / глянец не влияет на цену</p>
@@ -361,7 +353,8 @@
                 </div>
             </div>
         </section>
-
+        <!-- Кнопка "Рассчитать стоимость" -->
+        <button class="calculate-btn"><i class="fas fa-calculator"></i> Рассчитать стоимость</button>
     </main>
 
     <!-- Подвал -->
