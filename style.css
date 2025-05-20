@@ -280,6 +280,174 @@ footer {
     margin-top: 1rem;
 }
 
-.calculate-btn i {
+.callback-btn i {
     margin-right: 0.5rem;
+    color: #fff;
+}
+
+.nav-links  .tab-item.active a {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.service-card h2 {
+    margin: 1rem 0;
+}
+
+.service-card .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.service-card .btn:hover {
+    background-color: #2ecc71;
+}
+
+/* Глобальные стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+/* Шапка */
+.top-bar {
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Основной контент */
+.main {
+    padding: 20px;
+}
+
+.service-gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-list {
+    margin-top: 20px;
+}
+
+.service-list h2 {
+    margin-bottom: 10px;
+}
+
+.service-list ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.calculate-btn, .callback-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.calculate-btn {
+    background-color: #000;
+    color: #fff;
+}
+
+.callback-btn {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.benefits {
+    margin-top: 20px;
+}
+
+.benefits h2 {
+    margin-bottom: 10px;
+}
+
+.benefits ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Подвал */
+.footer-top {
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

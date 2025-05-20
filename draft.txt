@@ -19,3 +19,49 @@
 .price-table tbody tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+
+<section id="services" class="tab-content">
+            <h1>Наши услуги</h1>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="certificates.jpg" alt="Сертификаты">
+                    <h2>Сертификаты</h2>
+                    <a href="#" class="btn">Подробнее</a>
+                </div>
+                <div class="service-card">
+                    <img src="design.jpg" alt="Дизайн">
+                    <h2>Дизайн</h2>
+                    <a href="#" class="btn">Подробнее</a>
+                </div>
+                <div class="service-card">
+                    <img src="banners.jpg" alt="Баннеры">
+                    <h2>Баннеры</h2>
+                    <a href="#" class="btn">Подробнее</a>
+                </div>
+                <div class="service-card">
+                    <img src="tables.jpg" alt="Таблички">
+                    <h2>Таблички</h2>
+                    <a href="#" class="btn">Подробнее</a>
+                </div>
+                <div class="service-card">
+                    <img src="flyers.jpg" alt="Листовки">
+                    <h2>Листовки</h2>
+                    <a href="#" class="btn">Подробнее</a>
+                </div>
+                <div class="service-card">
+                    <img src="discount-cards.jpg" alt="Дисконтные карты">
+                    <h2>Дисконтные карты</h2>
+                    <a href="#" class="btn">Подробнее</a>
+                </div>
+                <div class="service-card">
+                    <img src="bonus-cards.jpg" alt="Бонусные карты">
+                    <h2>Бонусные карты</h2>
+                    <a href="#" class="btn">Подробнее</a>
+                </div>
+                <div class="service-card">
+                    <img src="business-cards.jpg" alt="Визитки">
+                    <h2>Визитки</h2>
+                    <a href="#" class="btn">Подробнее</a>
+                </div>
+            </div>
+        </section>
