@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Печатаем настроение</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/icons.css" />
+  <script src="../js/script.js" defer></script>
+</head>
+<body>
+
+<!-- Шапка -->
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">Печатаем настроение</a>
+    <nav class="navbar">
+      <ul class="menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="portfolio.html">Портфолио</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Слайдер -->
+<section class="hero">
+  <div class="swiper hero-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="slide-content">
+          <h1>Создаём карты, которые запоминаются</h1>
+          <p>Индивидуальный подход к каждому клиенту. Визитки, дисконтные карты, сертификаты.</p>
+          <a href="services.html" class="btn primary">Начать</a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slide-content">
+          <h1>Профессиональный дизайн под ключ</h1>
+          <p>Создание макета бесплатно. Поддержка от идеи до печати.</p>
+          <a href="services.html#design" class="btn primary">Подробнее</a>
+        </div>
+      </div>
+    </div>
+    <!-- Пагинация -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- Услуги -->
+<section class="services">
+  <div class="container">
+    <h2>Наши услуги</h2>
+    <div class="service-grid">
+      <!-- Карточки услуг -->
+    </div>
+  </div>
+</section>
+
+<!-- Портфолио -->
+<section class="portfolio">
+  <div class="container">
+    <h2>Портфолио</h2>
+    <p>Каждая карта уникальна. Над каждым дизайном трудится команда настоящих профессионалов.</p>
+
+    <!-- Табы -->
+    <div class="portfolio-tabs">
+      <button onclick="showPortfolio('discount')" class="tab-btn">Дисконтные</button>
+      <button onclick="showPortfolio('bonus')" class="tab-btn">Бонусные</button>
+      <button onclick="showPortfolio('tables')" class="tab-btn">Таблички</button>
+      <button onclick="showPortfolio('certificates')" class="tab-btn">Сертификаты</button>
+      <button onclick="showPortfolio('buisness')" class="tab-btn">Визитки</button>
+      <button onclick="showPortfolio('Price_lists')" class="tab-btn">Прайс-листы</button>
+      <button onclick="showPortfolio('calendards')" class="tab-btn">Календарики</button>
+      <button onclick="showPortfolio('banners')" class="tab-btn">Баннеры</button>
+      <button onclick="showPortfolio('stickers')" class="tab-btn">Наклейки</button>
+      <button onclick="showPortfolio('caricature-illustrations')" class="tab-btn">Шарж\иллюстрация</button>
+      <button onclick="showPortfolio('flyers')" class="tab-btn">Листовки</button>
+    </div>
+
+    <!-- Таб-контент -->
+    <div class="tab-content">
+      <div class="tab tab-1 active">
+        <div class="card-grid">
+          <div class="card" data-category="discount">
+            <img src="../images/portfolio/discount1.svg" alt="Дисконтная карта">
+          </div>
+          <div class="card" data-category="discount">
+            <img src="../images/portfolio/discount2.svg" alt="Дисконтная карта">
+          </div>
+          <div class="card" data-category="discount">
+            <img src="../images/portfolio/discount3.svg" alt="Дисконтная карта">
+          </div>
+          <div class="card" data-category="discount">
+            <img src="../images/portfolio/discount4.svg" alt="Дисконтная карта">
+          </div>
+          <div class="card" data-category="discount">
+            <img src="../images/portfolio/discount5.svg" alt="Дисконтная карта">
+          </div>
+          <div class="card" data-category="discount">
+            <img src="../images/portfolio/discount6.svg" alt="Дисконтная карта">
+          </div>
+        </div>
+      </div>
+      <div class="tab tab-2">
+        <div class="card-grid">
+          <div class="card" data-category="bonus">
+            <img src="../images/portfolio/bonus1.svg" alt="Бонусная карта">
+          </div>
+          <div class="card" data-category="bonus">
+            <img src="../images/portfolio/bonus2.svg" alt="Бонусная карта">
+          </div>
+          <div class="card" data-category="bonus">
+            <img src="../images/portfolio/bonus3.svg" alt="Бонусная карта">
+          </div>
+          <div class="card" data-category="bonus">
+            <img src="../images/portfolio/bonus4.svg" alt="Бонусная карта">
+          </div>
+          <div class="card" data-category="bonus">
+            <img src="../images/portfolio/bonus5.svg" alt="Бонусная карта">
+          </div>
+          <div class="card" data-category="bonus">
+            <img src="../images/portfolio/bonus6.svg" alt="Бонусная карта">
+          </div>
+        </div>
+        <div class="card-grid">
+          <div class="card" data-category="tables">
+            <img src="../images/portfolio/tables1.svg" alt="Таблички">
+          </div>
+          <div class="card" data-category="tables">
+            <img src="../images/portfolio/tables2.svg" alt="Таблички">
+          </div>
+          <div class="card" data-category="tables">
+            <img src="../images/portfolio/tables3.svg" alt="Таблички">
+          </div>
+          <div class="card" data-category="tables">
+            <img src="../images/portfolio/tables4.svg" alt="Таблички">
+          </div>
+          <div class="card" data-category="tables">
+            <img src="../images/portfolio/tables5.svg" alt="Таблички">
+          </div>
+          <div class="card" data-category="tables">
+            <img src="../images/portfolio/tables6.svg" alt="Таблички">
+          </div>
+        </div>
+        <div class="card-grid">
+          <div class="card" data-category="certificates">
+            <img src="../images/portfolio/certificates1.svg" alt="Сертификаты">
+          </div>
+          <div class="card" data-category="certificates">
+            <img src="../images/portfolio/certificates2.svg" alt="Сертификаты">
+          </div>
+          <div class="card" data-category="certificates">
+            <img src="../images/portfolio/certificates3.svg" alt="Сертификаты">
+          </div>
+          <div class="card" data-category="certificates">
+            <img src="../images/portfolio/certificates4.svg" alt="Сертификаты">
+          </div>
+          <div class="card" data-category="certificates">
+            <img src="../images/portfolio/certificates5.svg" alt="Сертификаты">
+          </div>
+          <div class="card" data-category="certificates">
+            <img src="../images/portfolio/certificates6.svg" alt="Сертификаты">
+          </div>
+        </div>
+        <div class="card-grid">
+          <div class="card" data-category="buisness">
+            <img src="../images/portfolio/buisness1.svg" alt="Визитки">
+          </div>
+          <div class="card" data-category="buisness">
+            <img src="../images/portfolio/buisness2.svg" alt="Визитки">
+          </div>
+          <div class="card" data-category="buisness">
+            <img src="../images/portfolio/buisness3.svg" alt="Визитки">
+          </div>
+          <div class="card" data-category="buisness">
+            <img src="../images/portfolio/buisness4.svg" alt="Визитки">
+          </div>
+          <div class="card" data-category="buisness">
+            <img src="../images/portfolio/buisness5.svg" alt="Визитки">
+          </div>
+          <div class="card" data-category="buisness">
+            <img src="../images/portfolio/buisness6.svg" alt="Визитки">
+          </div>
+        </div>
+        <div class="card-grid">
+          <div class="card" data-category="Price_lists">
+            <img src="../images/portfolio/Price_lists1.svg" alt="Прайс-листы">
+          </div>
+          <div class="card" data-category="Price_lists">
+            <img src="../images/portfolio/Price_lists2.svg" alt="Прайс-листы">
+          </div>
+          <div class="card" data-category="Price_lists">
+            <img src="../images/portfolio/Price_lists3.svg" alt="Прайс-листы">
+          </div>
+          <div class="card" data-category="Price_lists">
+            <img src="../images/portfolio/Price_lists4.svg" alt="Прайс-листы">
+          </div>
+          <div class="card" data-category="Price_lists">
+            <img src="../images/portfolio/Price_lists5.svg" alt="Прайс-листы">
+          </div>
+          <div class="card" data-category="Price_lists">
+            <img src="../images/portfolio/Price_lists6.svg" alt="Прайс-листы">
+          </div>
+        </div>
+        <div class="card-grid">
+          <div class="card" data-category="calendards">
+            <img src="../images/portfolio/calendards1.svg" alt="Календарики">
+          </div>
+          <div class="card" data-category="calendards">
+            <img src="../images/portfolio/calendards2.svg" alt="Календарики">
+          </div>
+          <div class="card" data-category="calendards">
+            <img src="../images/portfolio/calendards3.svg" alt="Календарики">
+          </div>
+          <div class="card" data-category="calendards">
+            <img src="../images/portfolio/calendards4.svg" alt="Календарики">
+          </div>
+          <div class="card" data-category="calendards">
+            <img src="../images/portfolio/calendards5.svg" alt="Календарики">
+          </div>
+          <div class="card" data-category="calendards">
+            <img src="../images/portfolio/calendards6.svg" alt="Календарики">
+          </div>
+        </div>
+        <div class="card-grid">
+          <div class="card" data-category="banners">
+            <img src="../images/portfolio/banners1.svg" alt="Баннеры">
+          </div>
+          <div class="card" data-category="banners">
+            <img src="../images/portfolio/banners2.svg" alt="Баннеры">
+          </div>
+          <div class="card" data-category="banners">
+            <img src="../images/portfolio/banners3.svg" alt="Баннеры">
+          </div>
+          <div class="card" data-category="banners">
+            <img src="../images/portfolio/banners4.svg" alt="Баннеры">
+          </div>
+          <div class="card" data-category="banners">
+            <img src="../images/portfolio/banners5.svg" alt="Баннеры">
+          </div>
+          <div class="card" data-category="banners">
+            <img src="../images/portfolio/banners6.svg" alt="Баннеры">
+          </div>
+        </div>
+        <div class="card-grid">
+          <div class="card" data-category="stickers">
+            <img src="../images/portfolio/stickers1.svg" alt="Наклейки">
+          </div>
+          <div class="card" data-category="stickers">
+            <img src="../images/portfolio/stickers2.svg" alt="Наклейки">
+          </div>
+          <div class="card" data-category="stickers">
+            <img src="../images/portfolio/stickers3.svg" alt="Наклейки">
+          </div>
+          <div class="card" data-category="stickers">
+            <img src="../images/portfolio/stickers4.svg" alt="Наклейки">
+          </div>
+          <div class="card" data-category="stickers">
+            <img src="../images/portfolio/stickers5.svg" alt="Наклейки">
+          </div>
+          <div class="card" data-category="stickers">
+            <img src="../images/portfolio/stickers6.svg" alt="Наклейки">
+          </div>
+      </div>
+      <div class="card-grid">
+          <div class="card" data-category="caricature-illustrations">
+            <img src="../images/portfolio/caricature-illustrations1.svg" alt="Шарж\иллюстрация">
+          </div>
+          <div class="card" data-category="caricature-illustrations">
+            <img src="../images/portfolio/caricature-illustrations2.svg" alt="Шарж\иллюстрация">
+          </div>
+          <div class="card" data-category="caricature-illustrations">
+            <img src="../images/portfolio/caricature-illustrations3.svg" alt="Шарж\иллюстрация">
+          </div>
+          <div class="card" data-category="caricature-illustrations">
+            <img src="../images/portfolio/caricature-illustrations4.svg" alt="Шарж\иллюстрация">
+          </div>
+          <div class="card" data-category="caricature-illustrations">
+            <img src="../images/portfolio/caricature-illustrations5.svg" alt="Шарж\иллюстрация">
+          </div>
+          <div class="card" data-category="caricature-illustrations">
+            <img src="../images/portfolio/caricature-illustrations6.svg" alt="Шарж\иллюстрация">
+          </div>
+      </div>
+      <div class="card-grid">
+          <div class="card" data-category="flyers">
+            <img src="../images/portfolio/flyers1.svg" alt="Наклейки">
+          </div>
+          <div class="card" data-category="flyers">
+            <img src="../images/portfolio/flyers2.svg" alt="Наклейки">
+          </div>
+          <div class="card" data-category="flyers">
+            <img src="../images/portfolio/flyers3.svg" alt="Наклейки">
+          </div>
+          <div class="card" data-category="flyers">
+            <img src="../images/portfolio/flyers4.svg" alt="Наклейки">
+          </div>
+          <div class="card" data-category="flyers">
+            <img src="../images/portfolio/flyers5.svg" alt="Наклейки">
+          </div>
+          <div class="card" data-category="flyers">
+            <img src="../images/portfolio/flyers6.svg" alt="Наклейки">
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Отзывы -->
+<section class="reviews">
+  <div class="container">
+    <h2>Отзывы наших клиентов</h2>
+    <div class="swiper reviews-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide review-item">
+          <p>“Заказывали визитки для студии дизайна. Получилось очень стильно и необычно. Рекомендуем!”</p>
+          <strong>— Ирина, Москва</strong>
+        </div>
+        <!-- Другие отзывы -->
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Форма обратной связи -->
+<section class="contact-form">
+  <div class="container">
+    <h2>Свяжитесь с нами</h2>
+    <form id="main-contact-form">
+      <input type="text" placeholder="Ваше имя" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Сообщение" required></textarea>
+      <button type="submit" class="btn primary">Отправить</button>
+    </form>
+  </div>
+</section>
+
+<!-- Подвал -->
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Печатаем настроение</p>
+    <div class="social-links">
+      <a href="https://pink-card.ru/ " target="_blank" rel="noopener noreferrer"><i class="icon-telegram">Telegram</i></a>
+      <a href="https://www.instagram.com/w.rabbit.card/ " target="_blank" rel="noopener noreferrer"><i class="icon-instagram">Instagram</i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Swiper JS -->
+<script src="../js/swiper-bundle.min.js"></script>
+</body>
+</html>

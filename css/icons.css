@@ -1,0 +1,9 @@
+.icon-telegram::before {
+  content: '\e900';
+  font-family: 'icons';
+}
+
+.icon-instagram::before {
+  content: '\e901';
+  font-family: 'icons';
+}
