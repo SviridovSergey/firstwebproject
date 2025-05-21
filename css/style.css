@@ -1,24 +1,91 @@
-/* Reset */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Roboto Slab', serif;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   color: #353333;
   background: #f9f9f9;
   min-width: 375px;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* Верхняя панель */
+.top-bar {
+  background-color: #f4f4f4;
+  padding: 10px 0;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar-social a {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.top-bar-social a:hover {
+  color: #7c3aed;
+}
+
+.top-bar-contact span {
+  margin-left: 20px;
+  font-size: 1rem;
+}
+
+.top-bar-contact i {
+  margin-right: 5px;
+}
+
+/* Шапка */
+.site-header {
+  background-color: white;
+  padding: 20px 0;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.tagline {
+  color: #2ecc71;
+  font-size: 1rem;
+}
+
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #7c3aed;
 }
 
 /* Header */
@@ -385,6 +452,7 @@ body {
   margin-bottom: 30px;
 }
 
+/* Таблицы цен */
 .price-table-container {
   display: flex;
   gap: 20px;
@@ -392,15 +460,49 @@ body {
 }
 
 .price-table {
+  width: 50%;
   flex: 1;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
+  background-color: white; /* Белый фон для контейнера */
 }
 
 .price-table table {
   width: 100%;
   border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.price-table thead th {
+  background-color: #2ecc71; /* Зеленый фон для заголовков */
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  border: none; /* Убрать границы для заголовков */
+}
+
+.price-table tbody td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.price-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Светлый фон для четных строк */
+}
+
+.price-table tbody tr:hover {
+  background-color: #f3f3f3; /* Плавный эффект при наведении */
+}
+
+.price-table tbody td:first-child {
+  text-align: left; /* Первый столбец — левое выравнивание */
+}
+
+.price-table thead + thead {
+  margin-top: 20px; /* Отступ между заголовками */
 }
 
 .price-table th,
@@ -410,58 +512,245 @@ body {
   border: 1px solid #ddd;
 }
 
-.price-table th {
-  background-color: #2ecc71;
+/* Улучшенные стили для заголовка таблицы */
+.header-section {
+  background-color: #2ecc71; /* Зеленый фон */
   color: white;
-  font-weight: bold;
-}
-
-.price-table td:first-child {
-  font-weight: bold;
-}
-
-.calculate-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+
+.header-icon {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.header-title span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Контейнер для кнопки */
+.calculate-btn-container {
+  text-align: right;
+  margin-top: 30px; /* Отступ сверху */
+}
+
+/* Стили для кнопки */
+.calculate-btn {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  margin-top: 20px;
   padding: 15px 30px;
-  background-color: #2ecc71;
+  background-color: #2ecc71; /* Зеленый фон */
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .calculate-btn:hover {
-  background-color: #27ae60;
+  background-color: #27ae60; /* Темнее зеленый при наведении */
 }
 
 .calculate-btn img {
+  margin-right: 10px; /* Отступ между иконкой и текстом */
+  width: 24px; /* Размер иконки */
+  height: 24px;
+}
+
+
+/* Информационные блоки */
+.additional-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.info-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.info-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #2ecc71; /* Зеленый фон */
+  color: white;
+  border-radius: 50%; /* Круглая форма */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.icon-info {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.info-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/*services.html*/
+/* Левая колонка */
+.left-column {
+  width: 30%;
+  float: left;
+  margin-right: 20px;
+}
+
+.categories {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.categories h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.categories ul {
+  list-style: none;
+  padding: 0;
+}
+
+.categories li {
+  margin-bottom: 5px;
+}
+
+.categories a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.categories a:hover {
+  color: #7c3aed;
+}
+
+.description {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Центральная колонка */
+.main-content {
+  width: 60%;
+  float: left;
+}
+
+.gallery {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  display: none;
+}
+
+.gallery-image.active {
+  display: block;
+}
+
+.gallery-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.gallery-dots .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.gallery-dots .dot.active {
+  background-color: #2ecc71;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.calculate-btn,
+.callback-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: #000;
+  color: white;
+}
+
+.calculate-btn:hover,
+.callback-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.callback-btn img {
   margin-right: 10px;
 }
 
-/* Общий контейнер */
-.header-section {
-  background-color: white; /* Зеленый фон */
-  padding: 10px 20px; /* Поля вокруг содержимого */
-  border-radius: 8px; /* Круглые углы */
-  display: flex;
-  justify-content: center; /* Выравнивание по центру */
-  align-items: center; /* Вертикальное выравнивание */
+.benefits {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Текст заголовка */
-.header-title span {
-  color: white; /* Белый текст */
-  font-size: 1.2rem; /* Размер шрифта */
-  font-weight: bold; /* Жирный шрифт */
-  margin-left: 10px; /* Отступ между иконкой и текстом */
+.benefits h2 {
+  margin-bottom: 20px;
 }
 
-/* Иконка */
-.header-icon {
-  width: 30px; /* Ширина иконки */
-  height: 30px; /* Высота иконки */
+.benefits ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.benefits p {
+  margin-bottom: 20px;
+}
+
+/* Правая колонка */
+.right-column {
+  width: 10%;
+  float: right;
+}
+
+.right-column img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }

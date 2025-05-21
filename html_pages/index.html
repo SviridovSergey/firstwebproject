@@ -10,15 +10,37 @@
 </head>
 <body>
 
+<!-- Верхняя панель -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-social">
+      <a href="#"><i class="icon-telegram"></i></a>
+      <a href="#"><i class="icon-instagram"></i></a>
+      <a href="#"><i class="icon-vk"></i></a>
+      <a href="#"><i class="icon-youtube"></i></a>
+      <a href="#"><i class="icon-plus"></i></a>
+    </div>
+    <div class="top-bar-contact">
+      <span><i class="icon-envelope"></i> whiterrabbitcard@mail.ru</span>
+      <span><i class="icon-phone"></i> +7 923 293 2218</span>
+    </div>
+  </div>
+</div>
+
 <!-- Шапка -->
 <header class="site-header">
   <div class="container">
-    <a href="index.html" class="logo">Печатаем настроение</a>
+    <a href="index.html" class="logo">
+      <img src="logo-white-rabbit.png" alt="Логотип">
+      <span>WhiteRabbit</span>
+      <p class="tagline">Печатаем настроение</p>
+    </a>
     <nav class="navbar">
       <ul class="menu">
         <li><a href="index.html">Главная</a></li>
         <li><a href="services.html">Услуги</a></li>
-        <li><a href="portfolio.html">Портфолио</a></li>
+        <li><a href="calculator.html">Калькулятор</a></li>
+        <li><a href="useful.html">Полезное</a></li>
         <li><a href="contacts.html">Контакты</a></li>
       </ul>
     </nav>
@@ -33,14 +55,12 @@
         <div class="slide-content">
           <h1>Создаём карты, которые запоминаются</h1>
           <p>Индивидуальный подход к каждому клиенту. Визитки, дисконтные карты, сертификаты.</p>
-          <a href="services.html" class="btn primary">Начать</a>
         </div>
       </div>
       <div class="swiper-slide">
         <div class="slide-content">
           <h1>Профессиональный дизайн под ключ</h1>
           <p>Создание макета бесплатно. Поддержка от идеи до печати.</p>
-          <a href="services.html#design" class="btn primary">Подробнее</a>
         </div>
       </div>
     </div>
@@ -54,7 +74,61 @@
   <div class="container">
     <h2>Наши услуги</h2>
     <div class="service-grid">
-      <!-- Карточки услуг -->
+      <!-- Карточка 1 -->
+      <div class="service-card">
+        <img src="images/certificates.jpg" alt="Сертификаты">
+        <h3>Сертификаты</h3>
+        <button class="btn primary">Подробнее</button>
+      </div>
+
+      <!-- Карточка 2 -->
+      <div class="service-card">
+        <img src="images/design.jpg" alt="Дизайн">
+        <h3>Дизайн</h3>
+        <button class="btn primary">Подробнее</button>
+      </div>
+
+      <!-- Карточка 3 -->
+      <div class="service-card">
+        <img src="images/banners.jpg" alt="Баннеры">
+        <h3>Баннеры</h3>
+        <button class="btn primary">Подробнее</button>
+      </div>
+
+      <!-- Карточка 4 -->
+      <div class="service-card">
+        <img src="images/tables.jpg" alt="Таблички">
+        <h3>Таблички</h3>
+        <button class="btn primary">Подробнее</button>
+      </div>
+
+      <!-- Карточка 5 -->
+      <div class="service-card">
+        <img src="images/flyers.jpg" alt="Листовки">
+        <h3>Листовки</h3>
+        <button class="btn primary">Подробнее</button>
+      </div>
+
+      <!-- Карточка 6 -->
+      <div class="service-card">
+        <img src="images/discount-cards.jpg" alt="Дисконтные карты">
+        <h3>Дисконтные карты</h3>
+        <button class="btn primary">Подробнее</button>
+      </div>
+
+      <!-- Карточка 7 -->
+      <div class="service-card">
+        <img src="images/bonus-cards.jpg" alt="Бонусные карты">
+        <h3>Бонусные карты</h3>
+        <button class="btn primary">Подробнее</button>
+      </div>
+
+      <!-- Карточка 8 -->
+      <div class="service-card">
+        <img src="images/business-cards.jpg" alt="Визитки">
+        <h3>Визитки</h3>
+        <button class="btn primary">Подробнее</button>
+      </div>
     </div>
   </div>
 </section>
@@ -310,51 +384,198 @@
 </section>
 
 <!-- Таблица цен -->
-
 <section class="price-list">
-  <div class="price-list">
-    <div class="container">
-      <h2>Прайс-лист</h2>
-      <p>Тиражи свыше 1000 карт рассчитываются индивидуально</p>
+  <div class="container">
+    <h2>Прайс-лист</h2>
+    <p>Тиражи свыше 1000 карт рассчитываются индивидуально</p>
+    <div class="price-table-container">
 
-      <div class="price-table-container">
-        <div class="price-table">
-          <table>
-            <thead>
-              <tr>
-                <th colspan="4" style="background-color: #2ecc71; color: white;">
-                  <div class="header-icon">
-                    <img src="icon-plastic-card.png" alt="Иконка пластиковой карты"> Пластиковые карты
-                  </div>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Данные таблицы -->
-            </tbody>
-          </table>
+      <!-- Пластиковые карты -->
+      <div class="price-table">
+        <div class="header-section">
+          <img src="icon-plastic-card.png" alt="Иконка пластиковой карты" class="header-icon">
+          <span>Пластиковые карты</span>
         </div>
-        <div class="price-table">
-          <table>
-            <thead>
-              <tr>
-                <th colspan="4" style="background-color: #2ecc71; color: white;">
-                  <img src="icon-certificate.png" alt="Иконка сертификата"> Сертификаты, Таблички
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Данные таблицы -->
-            </tbody>
-          </table>
-        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Количество</th>
+              <th>Белый | Цветной</th>
+              <th>Золото | Серебро</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>50 шт</td>
+              <td>24 ₽</td>
+              <td>27 ₽</td>
+            </tr>
+            <tr>
+              <td>100 шт</td>
+              <td>19 ₽</td>
+              <td>23 ₽</td>
+            </tr>
+            <tr>
+              <td>200 шт</td>
+              <td>18 ₽</td>
+              <td>21 ₽</td>
+            </tr>
+            <tr>
+              <td>300 шт</td>
+              <td>17 ₽</td>
+              <td>20 ₽</td>
+            </tr>
+            <tr>
+              <td>400 шт</td>
+              <td>16 ₽</td>
+              <td>18 ₽</td>
+            </tr>
+            <tr>
+              <td>500 шт</td>
+              <td>15 ₽</td>
+              <td>18 ₽</td>
+            </tr>
+            <tr>
+              <td>1000 шт</td>
+              <td>14 ₽</td>
+              <td>17 ₽</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
+      <!-- Сертификаты и таблички -->
+      <div class="price-table">
+        <div class="header-section">
+          <img src="icon-certificate.png" alt="Иконка сертификата" class="header-icon">
+          <span>Сертификаты, Таблички</span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Формат</th>
+              <th>Прозрачный</th>
+              <th>Белый | Цветной | Чер.</th>
+              <th>Золото | Серебро</th>
+              <th>Инста метка</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A4 (210x297)</td>
+              <td>500 ₽</td>
+              <td>400 ₽</td>
+              <td>500 ₽</td>
+              <td>1000 ₽</td>
+            </tr>
+            <tr>
+              <td>A5 (148x210)</td>
+              <td>280 ₽</td>
+              <td>220 ₽</td>
+              <td>280 ₽</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>A6 (105x148)</td>
+              <td>140 ₽</td>
+              <td>110 ₽</td>
+              <td>140 ₽</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>A7 (74x105)</td>
+              <td>85 ₽</td>
+              <td>75 ₽</td>
+              <td>85 ₽</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Пластиковые карты -->
+      <div class="price-table">
+        <div class="header-section">
+          <img src="icon-plastic-card.png" alt="Иконка пластиковой карты" class="header-icon">
+          <span>Пластиковые карты</span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Количество</th>
+              <th>Белый | Цветной</th>
+              <th>Золото | Серебро</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>50 шт</td>
+              <td>29 ₽</td>
+              <td>26 ₽</td>
+            </tr>
+            <tr>
+              <td>100 шт</td>
+              <td>24 ₽</td>
+              <td>21 ₽</td>
+            </tr>
+            <tr>
+              <td>200 шт</td>
+              <td>23.5 ₽</td>
+              <td>20 ₽</td>
+            </tr>
+            <tr>
+              <td>300 шт</td>
+              <td>23 ₽</td>
+              <td>19 ₽</td>
+            </tr>
+            <tr>
+              <td>400 шт</td>
+              <td>22 ₽</td>
+              <td>18 ₽</td>
+            </tr>
+            <tr>
+              <td>500 шт</td>
+              <td>21 ₽</td>
+              <td>17 ₽</td>
+            </tr>
+            <tr>
+              <td>1000 шт</td>
+              <td>20 ₽</td>
+              <td>16 ₽</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+<!-- Информационные блоки -->
+<div class="additional-info">
+  <div class="info-block">
+    <div class="info-icon">
+      <i class="icon-info">!</i>
+    </div>
+    <div class="info-text">
+      <p>Дизайн - 700 р., или печать по вашему макету</p>
+      <p>Покрытие: матовое / глянец не влияет на цену</p>
+    </div>
+  </div>
+  <div class="info-block">
+    <div class="info-icon">
+      <i class="icon-info">!</i>
+    </div>
+    <div class="info-text">
+      <p>Покрытие: матовое / глянец не влияет на цену</p>
+      <p>Углы можно оставить прямыми, или скруглить</p>
+    </div>
+  </div>
+</div>
+
+    <!-- Кнопка расчета -->
+    <div class="calculate-btn-container">
       <button class="calculate-btn">
         <img src="icon-calculator.png" alt="Иконка калькулятора"> Рассчитать стоимость
       </button>
     </div>
-  </div>
   </div>
 </section>
 
