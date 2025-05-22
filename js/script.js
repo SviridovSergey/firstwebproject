@@ -1,19 +1,30 @@
-// Swiper slider
-const heroSlider = new Swiper('.hero-slider', {
-  loop: true,
-  pagination: { el: '.swiper-pagination' },
-  autoplay: { delay: 5000 }
-});
+// Скрипт для слайдера
+document.addEventListener('DOMContentLoaded', function() {
+  const galleryImages = document.querySelectorAll('.gallery-image');
+  const dots = document.querySelectorAll('.gallery-dots .dot');
 
-const reviewsSlider = new Swiper('.reviews-slider', {
-  loop: true,
-  pagination: { el: '.swiper-pagination' },
-  slidesPerView: 1,
-  spaceBetween: 20,
-  breakpoints: {
-    768: { slidesPerView: 2 },
-    992: { slidesPerView: 3 }
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    galleryImages.forEach((slide, i) => {
+      slide.classList.remove('active');
+      dots[i].classList.remove('active');
+    });
+
+    galleryImages[index].classList.add('active');
+    dots[index].classList.add('active');
   }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showSlide(index);
+    });
+  });
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    showSlide(currentIndex);
+  }, 3000); // Автоматическая смена слайдов каждые 3 секунды
 });
 
 // Tabs
