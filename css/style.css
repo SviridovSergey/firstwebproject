@@ -756,7 +756,9 @@ body {
 }
 
 /* Сброс стилей */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -772,25 +774,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-.top-bar {
-  background-color: #f8f8f8;
-  padding: 10px 0;
-}
-
-.top-bar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.top-bar-social a {
-  margin-right: 10px;
-}
-
-.top-bar-contact span {
-  margin-right: 20px;
 }
 
 .site-header {
@@ -816,54 +799,22 @@ body {
   margin-right: 20px;
 }
 
-.main-content {
-  display: flex;
-}
-
-.left-column {
-  width: 30%;
-  padding-right: 20px;
-}
-
-.categories ul {
-  list-style: none;
-}
-
-.categories ul ul {
-  margin-left: 20px;
+.contact-info {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .gallery {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .gallery-image {
-  width: 100%;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   background-size: cover;
   background-position: center;
-}
-
-.gallery-dots {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.gallery-dots .dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: #ccc;
-  border-radius: 50%;
-  margin: 0 5px;
-}
-
-.gallery-dots .active {
-  background-color: #000;
 }
 
 .buttons {
@@ -889,17 +840,13 @@ body {
   padding-left: 20px;
 }
 
-.right-column {
-  width: 20%;
-  padding-left: 20px;
+.left-column {
+  width: 30%;
+  float: left;
+  margin-right: 20px;
 }
 
-.site-footer {
-  background-color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.social-links a {
-  margin-right: 10px;
+.main-content {
+  width: 70%;
+  float: left;
 }
