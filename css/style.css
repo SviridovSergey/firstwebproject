@@ -650,8 +650,8 @@ body {
 
 /* Центральная колонка */
 .main-content {
-  width: 60%;
-  float: left;
+  display: flex;
+  justify-content: space-between;
 }
 
 .gallery {
@@ -714,7 +714,7 @@ body {
 .calculate-btn:hover,
 .callback-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4spx 20px rgba(0, 0, 0, 0.2);
 }
 
 .callback-btn img {
@@ -727,6 +727,7 @@ body {
   margin-top: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  
 }
 
 .benefits h2 {
@@ -850,3 +851,10 @@ body {
   width: 70%;
   float: left;
 }
+
+.right-column {
+  float: right;
+  width: 30%;
+  margin-left: 20px;
+}
+
