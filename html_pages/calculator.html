@@ -5,51 +5,180 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Наши услуги</title>
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/icons.css">
   <script src="../js/script.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="../images/logo.png" alt="Логотип" />
-      </a>
-      <nav class="navbar">
-        <ul class="menu">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="services.html">Услуги</a></li>
-          <li><a href="calculator.html">Калькулятор</a></li>
-          <li><a href="useful.html">Полезное</a></li>
-          <li><a href="contact.html">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <section class="services-details">
-    <div class="container">
-      <h2>Услуги</h2>
-      <div id="vizitki">
-        <h3>Визитки</h3>
-        <p>Профессиональный дизайн и печать визиток.</p>
-        <img src="../images/vizitki.jpg" alt="Визитки" />
+<!-- Верхняя панель -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-social">
+      <a href="https://t.me/whiterabbitcards "><i class="icon-telegram"></i></a>
+      <a href="https://www.instagram.com/w.rabbit.card/ "><i class="icon-instagram"></i></a>
+      <a href="https://vk.com/whiterabbitcard "><i class="icon-vk"></i></a>
+      <a href="https://www.youtube.com/channel/UC4grkfRVyrmr-Pn9gVZBu6A "><i class="icon-youtube"></i></a>
+      <a href="https://dzen.ru/whiterabbitcards "><i class="icon-dzen"></i></a>
+    </div>
+    <div class="top-bar-contact">
+      <span><i class="icon-envelope"></i> whiterrabbitcard@mail.ru</span>
+      <span><i class="icon-phone"></i> +7 923 293 2218</span>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <img src="logo-white-rabbit.svg" alt="Логотип">
+      <span>WhiteRabbit</span>
+      <p class="tagline">Печатаем настроение</p>
+    </a>
+    <nav class="navbar">
+      <ul class="menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="calculator.html">Калькулятор</a></li>
+        <li><a href="useful.html">Полезное</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+78005553535" class="phone-number">+ 8 800 555 35 35</a>
+  </div>
+</header>
+
+<main class="main-content">
+  <section class="calculator-section">
+    <h1>Собери свою карту</h1>
+    <p>Рассчитывайте стоимость самостоятельно или с помощью нашего специалиста, позвонив по бесплатному телефону: 7 129 123 45 12</p>
+
+    <div class="calculator-container">
+      <div class="card-preview">
+        <div class="card-side card-front">
+          <div class="card-image">
+            <img src="placeholder-card-front.jpg" alt="фото карточки спереди">
+          </div>
+        </div>
+        <div class="card-side card-back">
+          <div class="card-image">
+            <img src="placeholder-card-back.jpg" alt="фото карточки сзади">
+          </div>
+        </div>
       </div>
-      <div id="diskontnye-karty">
-        <h3>Дисконтные карты</h3>
-        <p>Создание уникальных дисконтных карт.</p>
-        <img src="../images/diskontnye-karty.jpg" alt="Дисконтные карты" />
+
+      <div class="form-container">
+        <!-- Левая колонка -->
+        <div class="form-column">
+          <label for="quantity">Количество</label>
+          <select id="quantity">
+              <option value="50">50 шт</option>
+              <option value="100">100 шт</option>
+              <option value="200">200 шт</option>
+              <option value="300">300 шт</option>
+              <option value="400">400 шт</option>
+              <option value="500">500 шт</option>
+              <option value="1000">1000 шт</option>
+          </select>
+
+          <label for="plastic-type">Тип пластика</label>
+          <select id="plastic-type">
+              <option value="white-standard">Белый стандартный</option>
+              <option value="black">Черный</option>
+              <option value="transparent">Прозрачный</option>
+              <option value="color">Цветной</option>
+              <option value="gold">Золотой</option>
+              <option value="silver">Серебрянный</option>
+          </select>
+
+          <label for="hole">Отверстие</label>
+          <select id="hole">
+              <option value="none">Нет</option>
+              <option value="oblong">Продолговатое</option>
+              <option value="round">Круглое</option>
+          </select>
+
+          <label for="lamination">Ламинация</label>
+          <select id="lamination">
+              <option value="standard">Стандарт</option>
+              <option value="gloss">Глянец</option>
+              <option value="matte">Матовая</option>
+              <option value="rough-lamination">Шероховатая ламинация</option>
+              <option value="textured-lamination">Фактурная ламинация</option>
+          </select>
+        </div>
+
+        <div class="form-column">
+          <h2>Лицевая сторона</h2>
+          <label for="front-numbering">Нумерация</label>
+          <select id="front-numbering">
+            <option value="none">Нет</option>
+            <option value="printed">Печатная</option>
+            <option value="embossment">Эмбоссирование</option>
+          </select>
+
+          <label for="contactless-chip">Бесконтактный чип</label>
+          <select id="contactless-chip">
+            <option value="none">Нет</option>
+            <option value="yes">Да</option>
+          </select>
+
+          <h2>Оборотная сторона</h2>
+          <label for="back-barcode">Штрих-код</label>
+          <select id="back-barcode">
+            <option value="none">Нет</option>
+            <option value="yes">Да</option>
+          </select>
+
+          <label for="back-magnetic-strip">Магнитная полоса</label>
+          <select id="back-magnetic-strip">
+            <option value="none">Нет</option>
+            <option value="yes">Да</option>
+          </select>
+
+          <label for="back-qr-code">QR-code</label>
+          <select id="back-qr-code">
+            <option value="none">Нет</option>
+            <option value="yes">Да</option>
+          </select>
+
+          <label for="back-magnet">Магнит</label>
+          <select id="back-magnet">
+            <option value="none">Нет</option>
+            <option value="yes">Да</option>
+          </select>
+        </div>
       </div>
-      <!-- Другие услуги... -->
+
+      <!-- Подсчет стоимости -->
+      <div class="price-section">
+        <div class="price-item">
+          <span>Цена за штуку</span>
+          <span id="price-per-unit">0 ₽</span>
+        </div>
+        <div class="price-item">
+          <span>Сумма</span>
+          <span id="total-price">0 ₽</span>
+        </div>
+      </div>
+
+      <!-- Форма заказа -->
+      <form class="order-form">
+        <input type="text" placeholder="Имя" required>
+        <input type="tel" placeholder="Телефон" required>
+        <button type="submit">Заказать карты</button>
+      </form>
     </div>
   </section>
+</main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2023 Печатаем настроение</p>
-      <div class="social-links">
-        <a href="#"><i class="icon-telegram"></i></a>
-        <a href="#"><i class="icon-instagram"></i></a>
-      </div>
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Печатаем настроение</p>
+    <div class="social-links">
+      <a href="https://t.me/whiterabbitcards " target="_blank" rel="noopener noreferrer"><i class="icon-telegram">Telegram</i></a>
+      <a href="https://www.instagram.com/w.rabbit.card/ " target="_blank" rel="noopener noreferrer"><i class="icon-instagram">Instagram</i></a>
     </div>
-  </footer>
+  </div>
+</footer>
 </body>
 </html>

@@ -64,3 +64,32 @@ document.querySelectorAll('.tab-btn').forEach(button => {
     showPortfolio(category);
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const quantitySelect = document.getElementById('quantity');
+  const plasticTypeSelect = document.getElementById('plastic-type');
+  const pricePerUnitElement = document.getElementById('price-per-unit');
+  const totalPriceElement = document.getElementById('total-price');
+
+  function calculatePrice() {
+    const quantity = parseInt(quantitySelect.value);
+    let basePrice = 24; // Базовая цена за штуку
+
+    // Пример: цена зависит от типа пластика
+    if (plasticTypeSelect.value === 'color') {
+      basePrice += 5;
+    } else if (plasticTypeSelect.value === 'gold' || plasticTypeSelect.value === 'silver') {
+      basePrice += 10;
+    }
+
+    const total = quantity * basePrice;
+
+    pricePerUnitElement.textContent = `${basePrice} ₽`;
+    totalPriceElement.textContent = `${total} ₽`;
+  }
+
+  quantitySelect.addEventListener('change', calculatePrice);
+  plasticTypeSelect.addEventListener('change', calculatePrice);
+
+  calculatePrice();
+});

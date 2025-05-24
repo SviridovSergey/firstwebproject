@@ -650,8 +650,8 @@ body {
 
 /* Центральная колонка */
 .main-content {
-  display: flex;
-  justify-content: space-between;
+  width: 60%;
+  float: left;
 }
 
 .gallery {
@@ -714,7 +714,7 @@ body {
 .calculate-btn:hover,
 .callback-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4spx 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .callback-btn img {
@@ -727,7 +727,6 @@ body {
   margin-top: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  
 }
 
 .benefits h2 {
@@ -757,17 +756,17 @@ body {
 }
 
 /* Сброс стилей */
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+
+
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  background-color: #f4f4f4;
   color: #333;
 }
 
@@ -777,6 +776,32 @@ body {
   padding: 0 20px;
 }
 
+.top-bar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar-social a {
+  color: #fff;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.top-bar-contact span {
+  margin-left: 20px;
+}
+
+.top-bar-contact i {
+  margin-right: 5px;
+}
+
 .site-header {
   background-color: #fff;
   padding: 20px 0;
@@ -784,38 +809,124 @@ body {
 
 .logo img {
   height: 50px;
-  margin-right: 10px;
+  width: auto;
 }
 
 .tagline {
   color: green;
 }
 
-.navbar ul {
+.menu {
   list-style: none;
   display: flex;
 }
 
-.navbar li {
+.menu li {
   margin-right: 20px;
 }
 
-.contact-info {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+.menu li:last-child {
+  margin-right: 0;
 }
 
-.gallery {
-  display: flex;
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.phone-number {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #333;
+  font-weight: bold;
+}
+
+.main-content {
+  padding: 20px 0;
+}
+
+.services-section h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.services-section p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
   gap: 20px;
 }
 
+.left-column {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.categories {
+  list-style: none;
+  padding: 0;
+}
+
+.categories li {
+  margin-bottom: 10px;
+}
+
+.categories li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.info-box {
+  background-color: #eaeaea;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.gallery {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .gallery-image {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 300px;
   background-size: cover;
   background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.gallery-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #007bff;
 }
 
 .buttons {
@@ -824,16 +935,30 @@ body {
   margin-top: 20px;
 }
 
-.calculate-btn, .callback-btn {
+.calculate-btn,
+.callback-btn {
   padding: 10px 20px;
-  background-color: #000;
+  background-color: #007bff;
   color: #fff;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 1rem;
+}
+
+.calculate-btn:hover,
+.callback-btn:hover {
+  background-color: #0056b3;
+}
+
+.callback-btn img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
 }
 
 .benefits h2 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .benefits ul {
@@ -841,20 +966,231 @@ body {
   padding-left: 20px;
 }
 
-.left-column {
-  width: 30%;
-  float: left;
-  margin-right: 20px;
+.benefits p {
+  margin: 10px 0;
 }
 
-.main-content {
-  width: 70%;
-  float: left;
+.right-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.right-column {
-  float: right;
-  width: 30%;
+.site-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.social-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/*Calculates page*/
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Базовые стили */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Верхняя панель */
+.top-bar {
+  background-color: #f4f4f4;
+  padding: 10px 0;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar-social a {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+    .top-bar-social a:hover {
+  color: #007bff;
+}
+
+.top-bar-contact span {
   margin-left: 20px;
+  font-size: 1rem;
 }
 
+.top-bar-contact i {
+  margin-right: 5px;
+}
+
+/* Шапка */
+.site-header {
+  background-color: white;
+  padding: 20px 0;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.tagline {
+  color: #2ecc71;
+  font-size: 1rem;
+}
+
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #007bff;
+}
+
+/* Главная секция */
+.calculator-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-side {
+  width: 200px;
+  height: 150px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+select {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;  
+}
+
+.price-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.order-form input {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.order-form button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-form button:hover {
+  background-color: #333;
+}
+
+/* Подвал */
+.site-footer {
+  background: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #007bff;
+}
