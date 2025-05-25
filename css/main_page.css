@@ -1,0 +1,414 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Шапка */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #7c3aed;
+}
+
+.phone-number {
+  font-size: 1.2rem;
+  margin-left: 20px;
+}
+
+/* Главная секция */
+.hero {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.slide-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.slide-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: #7c3aed;
+  color: white;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid #7c3aed;
+  color: #7c3aed;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Услуги */
+.services {
+  padding: 40px 0;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.service-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.service-card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: #7c3aed;
+  color: white;
+}
+
+.service-card .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Портфолио */
+.portfolio {
+  padding: 40px 0;
+}
+
+.portfolio h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.portfolio p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.portfolio-tabs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.tab-btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tab-btn.active {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tab-btn:nth-child(1) {
+  background: linear-gradient(to right, #ff6b6b, #ffb3ba);
+}
+
+.tab-btn:nth-child(2) {
+  background: linear-gradient(to right, #ff9a9e, #fecbbf);
+}
+
+.tab-btn:nth-child(3) {
+  background: linear-gradient(to right, #ff79c6, #ff9d9a);
+}
+
+.tab-btn:nth-child(4) {
+  background: linear-gradient(to right, #81ecec, #6c5ce7);
+}
+
+.tab-btn:nth-child(5) {
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+}
+
+.tab-btn:nth-child(6) {
+  background: linear-gradient(to right, #ff512f, #dd2476);
+}
+
+.tab-btn:nth-child(7) {
+  background: linear-gradient(to right, #ff5e5b, #fcca56);
+}
+
+.tab-btn:nth-child(8) {
+  background: linear-gradient(to right, #45a29e, #303245);
+}
+
+.tab-btn:nth-child(9) {
+  background: linear-gradient(to right, #ff512f, #dd2476);
+}
+
+.tab-btn:nth-child(10) {
+  background: linear-gradient(to right, #ff7675, #e9c46a);
+}
+
+.tab-btn:nth-child(11) {
+  background: linear-gradient(to right, #3498db, #1abc9c);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* Прайс-лист */
+.price-list {
+  padding: 40px 0;
+}
+
+.price-table-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.price-table {
+  width: 50%;
+  flex: 1;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.price-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.price-table thead th {
+  background-color: #2ecc71;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  border: none;
+}
+
+.price-table tbody td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.price-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.price-table tbody tr:hover {
+  background-color: #f3f3f3;
+}
+
+.price-table tbody td:first-child {
+  text-align: left;
+}
+
+.header-section {
+  background-color: #2ecc71;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-icon {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.header-title span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.additional-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.info-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.info-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #2ecc71;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.info-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.calculate-btn-container {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.calculate-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calculate-btn:hover {
+  background-color: #27ae60;
+}
+
+.calculate-btn img {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+/* Подвал */
+.site-footer {
+  background: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #7c3aed;
+}

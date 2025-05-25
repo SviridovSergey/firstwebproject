@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'icons';
+  src: url('../images/icons.eot');
+  src: url('../images/text/icons.eot?#iefix') format('embedded-opentype'),
+       url('../images/text/icons.woff') format('woff'),
+       url('../images/text/icons.ttf') format('truetype'),
+       url('../images/text/icons.svg#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -761,9 +771,6 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
-
-
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -991,29 +998,36 @@ body {
 }
 
 /*Calculates page*/
-/* Сброс стилей */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Базовые стили */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #f4f4f4;
+  color: #ac5656;
+  min-width: 375px;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  margin: 0 auto; /* Centers the container */
+  padding: 0 20px;
 }
 
-/* Верхняя панель */
+.main-content {
+  background-color: white;
+  margin: 0 auto; /* Centers the main content within the container */
+  max-width: 1200px; /* Ensures it doesn't exceed the container width */
+}
+
+/* Top Bar */
 .top-bar {
   background-color: #f4f4f4;
   padding: 10px 0;
@@ -1032,8 +1046,8 @@ body {
   transition: color 0.3s ease;
 }
 
-    .top-bar-social a:hover {
-  color: #007bff;
+.top-bar-social a:hover {
+  color: #7c3aed;
 }
 
 .top-bar-contact span {
@@ -1045,15 +1059,16 @@ body {
   margin-right: 5px;
 }
 
-/* Шапка */
+/* Header */
 .site-header {
   background-color: white;
   padding: 20px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .logo img {
-  width: 50px;
-  height: 50px;
+  width: 65px;
+  height: 75px;
   vertical-align: middle;
   margin-right: 10px;
 }
@@ -1066,7 +1081,7 @@ body {
 }
 
 .tagline {
-  color: #2ecc71;
+  color: green;
   font-size: 1rem;
 }
 
@@ -1083,102 +1098,141 @@ body {
 }
 
 .menu li a:hover {
-  color: #007bff;
+  color: #7c3aed;
 }
 
-/* Главная секция */
+.phone-number {
+  font-size: 1.2rem;
+  margin-left: 20px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.phone-number:hover {
+  color: #7c3aed;
+}
+
+/* Calculator Section */
 .calculator-section {
+  padding: 40px 0;
   background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.calculator-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+.calculator-section h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.calculator-section p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 30px;
 }
 
 .card-preview {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .card-side {
-  width: 200px;
-  height: 150px;
-  background-color: #e9ecef;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.card-side:hover {
+  transform: translateY(-5px);
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card-side:hover img {
+  transform: scale(1.1);
 }
 
 .form-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
 .form-column {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
-label {
+.form-column label {
+  margin-bottom: 5px;
   font-weight: bold;
 }
 
-select {
-  padding: 8px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.form-column select {
+  padding: 10px;
   width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
 .price-section {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;  
+  margin-top: 20px;
 }
 
 .price-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  font-size: 1.2rem;
+}
+
+.price-item span:first-child {
+  font-weight: bold;
+}
+
+.order-form {
+  margin-top: 20px;
 }
 
 .order-form input {
-  padding: 8px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 10px;
   width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 
 .order-form button {
-  background-color: #000;
-  color: #fff;
   padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #7c3aed;
+  color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .order-form button:hover {
-  background-color: #333;
+  background-color: #6a2d9d;
 }
 
-/* Подвал */
+/* Footer */
 .site-footer {
-  background: #333;
+  background-color: #333;
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -1192,5 +1246,16 @@ select {
 }
 
 .social-links a:hover {
-  color: #007bff;
+  color: #7c3aed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card-preview {
+    flex-direction: column;
+  }
 }

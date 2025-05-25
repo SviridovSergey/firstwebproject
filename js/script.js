@@ -65,31 +65,73 @@ document.querySelectorAll('.tab-btn').forEach(button => {
   });
 });
 
+// script.js
 document.addEventListener('DOMContentLoaded', () => {
   const quantitySelect = document.getElementById('quantity');
   const plasticTypeSelect = document.getElementById('plastic-type');
+  const holeSelect = document.getElementById('hole');
+  const laminationSelect = document.getElementById('lamination');
+  const frontNumberingSelect = document.getElementById('front-numbering');
+  const contactlessChipSelect = document.getElementById('contactless-chip');
+  const backBarcodeSelect = document.getElementById('back-barcode');
+  const backMagneticStripSelect = document.getElementById('back-magnetic-strip');
+  const backQrCodeSelect = document.getElementById('back-qr-code');
+  const backMagnetSelect = document.getElementById('back-magnet');
   const pricePerUnitElement = document.getElementById('price-per-unit');
   const totalPriceElement = document.getElementById('total-price');
 
   function calculatePrice() {
-    const quantity = parseInt(quantitySelect.value);
-    let basePrice = 24; // Базовая цена за штуку
+    let basePrice = 24; // Base price per unit
 
-    // Пример: цена зависит от типа пластика
-    if (plasticTypeSelect.value === 'color') {
+    // Add logic to adjust price based on selections
+    if (plasticTypeSelect.value === 'gold' || plasticTypeSelect.value === 'silver') {
       basePrice += 5;
-    } else if (plasticTypeSelect.value === 'gold' || plasticTypeSelect.value === 'silver') {
+    }
+
+    if (holeSelect.value !== 'none') {
+      basePrice += 2;
+    }
+
+    if (laminationSelect.value !== 'standard') {
+      basePrice += 3;
+    }
+
+    if (frontNumberingSelect.value !== 'none') {
+      basePrice += 4;
+    }
+
+    if (contactlessChipSelect.value === 'yes') {
       basePrice += 10;
     }
 
-    const total = quantity * basePrice;
+    if (backBarcodeSelect.value === 'yes') {
+      basePrice += 2;
+    }
+
+    if (backMagneticStripSelect.value === 'yes') {
+      basePrice += 3;
+    }
+
+    if (backQrCodeSelect.value === 'yes') {
+      basePrice += 2;
+    }
+
+    if (backMagnetSelect.value === 'yes') {
+      basePrice += 1;
+    }
+
+    const quantity = parseInt(quantitySelect.value);
+    const total = basePrice * quantity;
 
     pricePerUnitElement.textContent = `${basePrice} ₽`;
     totalPriceElement.textContent = `${total} ₽`;
   }
 
-  quantitySelect.addEventListener('change', calculatePrice);
-  plasticTypeSelect.addEventListener('change', calculatePrice);
+  // Attach event listeners
+  [quantitySelect, plasticTypeSelect, holeSelect, laminationSelect, frontNumberingSelect, contactlessChipSelect, backBarcodeSelect, backMagneticStripSelect, backQrCodeSelect, backMagnetSelect].forEach(select => {
+    select.addEventListener('change', calculatePrice);
+  });
 
+  // Initial calculation
   calculatePrice();
 });

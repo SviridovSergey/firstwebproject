@@ -1,0 +1,385 @@
+/*services.html*/
+/* Левая колонка */
+.left-column {
+  width: 30%;
+  float: left;
+  margin-right: 20px;
+}
+
+.categories {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.categories h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.categories ul {
+  list-style: none;
+  padding: 0;
+}
+
+.categories li {
+  margin-bottom: 5px;
+}
+
+.categories a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.categories a:hover {
+  color: #7c3aed;
+}
+
+.description {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Центральная колонка */
+.main-content {
+  width: 60%;
+  float: left;
+}
+
+.gallery {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  display: none;
+}
+
+.gallery-image.active {
+  display: block;
+}
+
+.gallery-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.gallery-dots .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.gallery-dots .dot.active {
+  background-color: #2ecc71;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.calculate-btn,
+.callback-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: #000;
+  color: white;
+}
+
+.calculate-btn:hover,
+.callback-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.callback-btn img {
+  margin-right: 10px;
+}
+
+.benefits {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.benefits h2 {
+  margin-bottom: 20px;
+}
+
+.benefits ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.benefits p {
+  margin-bottom: 20px;
+}
+
+/* Правая колонка */
+.right-column {
+  width: 10%;
+  float: right;
+}
+
+.right-column img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.top-bar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar-social a {
+  color: #fff;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.top-bar-contact span {
+  margin-left: 20px;
+}
+
+.top-bar-contact i {
+  margin-right: 5px;
+}
+
+.site-header {
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.tagline {
+  color: green;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.phone-number {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #333;
+  font-weight: bold;
+}
+
+.main-content {
+  padding: 20px 0;
+}
+
+.services-section h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.services-section p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  gap: 20px;
+}
+
+.left-column {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.categories {
+  list-style: none;
+  padding: 0;
+}
+
+.categories li {
+  margin-bottom: 10px;
+}
+
+.categories li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.info-box {
+  background-color: #eaeaea;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.gallery {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.gallery-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #007bff;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.calculate-btn,
+.callback-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.calculate-btn:hover,
+.callback-btn:hover {
+  background-color: #0056b3;
+}
+
+.callback-btn img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.benefits h2 {
+  margin-bottom: 10px;
+}
+
+.benefits ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.benefits p {
+  margin: 10px 0;
+}
+
+.right-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.site-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.social-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
