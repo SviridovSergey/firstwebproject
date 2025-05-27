@@ -39,6 +39,7 @@
 .icon-cards::before { content: '\e90a'; }
 .icon-sertificates::before { content: '\e90b'; }
 .icon-plus::before { content: '\e90c'; }
+.icon-whatsapp::before {content: '\e90d';}
 
 /* Дополнительно: размеры иконок можно регулировать */
 .icon-small::before { font-size: 0.8em; }

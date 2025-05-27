@@ -4,148 +4,301 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Печатаем настроение</title>
+  <link rel="stylesheet" href="../css/main_page.css" />
   <link rel="stylesheet" href="../css/services_page.css" />
   <link rel="stylesheet" href="../css/icons.css" />
-  <script src="../js/script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js "></script>
+  <script defer src="../js/script.js"></script>
 </head>
 <body>
+
+<!-- Начальная анимация -->
+<div id="universe-animation" class="hidden">
+  <video autoplay muted loop>
+    <source src="milky-way.mp4" type="video/mp4">
+  </video>
+  <button id="enter-universe">Погрузиться во вселенную лучших пластиковых карт</button>
+</div>
 
 <!-- Верхняя панель -->
 <div class="top-bar">
   <div class="container">
-    <div class="top-bar-social">
-      <a href="https://t.me/whiterabbitcards "><i class="icon-telegram"></i></a>
-      <a href="https://www.instagram.com/w.rabbit.card/ "><i class="icon-instagram"></i></a>
-      <a href="https://vk.com/whiterabbitcard "><i class="icon-vk"></i></a>
-      <a href="https://www.youtube.com/channel/UC4grkfRVyrmr-Pn9gVZBu6A "><i class="icon-youtube"></i></a>
-      <a href="https://dzen.ru/whiterabbitcards "><i class="icon-dzen"></i></a>
+    <div class="logo">
+      <img src="../images/main_page/logo-PinkCard-Studio.svg" alt="Логотип PinkCard studio" />
     </div>
-    <div class="top-bar-contact">
-      <span><i class="icon-envelope"></i> whiterrabbitcard@mail.ru</span>
-      <span><i class="icon-phone"></i> +7 923 293 2218</span>
+    <div class="contact-info">
+      <a href="#" class="icon-link">
+        <span>+7 (918) 852 83 65</span>
+      </a>
+      <a href="#">
+        <i class="icon-telegram"></i>
+      </a>
+      <button class="action-btn calculate">Расчитать стоимость сайта</button>
+      <button class="action-btn telegram">Подписаться на Telegram канал</button>
     </div>
   </div>
 </div>
 
-<!-- Шапка -->
-<header class="site-header">
+<!-- Нижняя панель меню -->
+<nav class="main-menu">
   <div class="container">
-    <a href="index.html" class="logo">
-      <img src="logo-white-rabbit.png" alt="Логотип">
-      <span>WhiteRabbit</span>
-      <p class="tagline">Печатаем настроение</p>
-    </a>
-    <nav class="navbar">
-      <ul class="menu">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="services.html">Услуги</a></li>
-        <li><a href="calculator.html">Калькулятор</a></li>
-        <li><a href="useful.html">Полезное</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
-      </ul>
-    </nav>
-    <a href="tel:+79232932218" class="phone-number">+7 923 293 2218</a>
+    <ul>
+      <li><a href="../html_pages/index.html">Главная</a></li>
+      <li><a href="../html_pages/services.html">Портфолио</a></li>
+      <li><a href="#">Отзывы</a></li>
+      <li><a href="#">Стоимость</a></li>
+      <li><a href="#">Полезные статьи</a></li>
+      <li><a href="#">Тайная комната</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
   </div>
-</header>
+</nav>
 
-<main class="main-content">
-  <section class="services-section">
+<!-- Портфолио -->
+<section class="portfolio-section">
+  <div class="container">
+    <h2>Портфолио — наши готовые сайты и кейсы для бизнеса</h2>
+    <p>Смотрите, какие проекты мы реализовали: интернет-магазины, лендинги, корпоративные сайты и другие решения для разных ниш. Нажмите на каждый кейс, чтобы узнать подробности и увидеть результаты.</p>
+
+    <!-- Фильтры -->
+    <div class="filters">
+      <div class="filter-type">
+        <h3>Тип проекта</h3>
+        <ul>
+          <li><a href="#">Все</a></li>
+          <li><a href="#">Лендинги</a></li>
+          <li><a href="#">Многостраничный сайт</a></li>
+          <li><a href="#">Интернет-магазин</a></li>
+          <li><a href="#">Дизайн-макет сайта</a></li>
+        </ul>
+      </div>
+      <div class="filter-price">
+        <h3>Цена</h3>
+        <input type="range" min="20000" max="40000" value="20000" class="price-slider">
+        <div class="price-range">
+          <span class="price-min">20 000 ₽</span>
+          <span class="price-max">40 000 ₽</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Проекты -->
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="../images/services_page/project1.svg" alt="Проект 1">
+        <h3>Сайт для налогового консультанта на Tilda | +50% клиентов за 5 дней</h3>
+        <p>25 000 ₽</p>
+        <div class="project-buttons">
+          <button class="btn primary">ПОДРОБНЕЕ</button>
+          <button class="btn secondary">КОНСУЛЬТАЦИЯ</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="../images/services_page/project2.svg" alt="Проект 2">
+        <h3>Сайт для налогового консультанта на Tilda | +50% клиентов за 5 дней</h3>
+        <p>25 000 ₽</p>
+        <div class="project-buttons">
+          <button class="btn primary">ПОДРОБНЕЕ</button>
+          <button class="btn secondary">КОНСУЛЬТАЦИЯ</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="../images/services_page/project3.svg" alt="Проект 3">
+        <h3>Сайт для налогового консультанта на Tilda | +50% клиентов за 5 дней</h3>
+        <p>25 000 ₽</p>
+        <div class="project-buttons">
+          <button class="btn primary">ПОДРОБНЕЕ</button>
+          <button class="btn secondary">КОНСУЛЬТАЦИЯ</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="../images/services_page/project4.svg" alt="Проект 4">
+        <h3>Сайт для налогового консультанта на Tilda | +50% клиентов за 5 дней</h3>
+        <p>25 000 ₽</p>
+        <div class="project-buttons">
+          <button class="btn primary">ПОДРОБНЕЕ</button>
+          <button class="btn secondary">КОНСУЛЬТАЦИЯ</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="../images/services_page/project5.svg" alt="Проект 5">
+        <h3>Сайт для налогового консультанта на Tilda | +50% клиентов за 5 дней</h3>
+        <p>25 000 ₽</p>
+        <div class="project-buttons">
+          <button class="btn primary">ПОДРОБНЕЕ</button>
+          <button class="btn secondary">КОНСУЛЬТАЦИЯ</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="../images/services_page/project6.svg" alt="Проект 6">
+        <h3>Сайт для налогового консультанта на Tilda | +50% клиентов за 5 дней</h3>
+        <p>25 000 ₽</p>
+        <div class="project-buttons">
+          <button class="btn primary">ПОДРОБНЕЕ</button>
+          <button class="btn secondary">КОНСУЛЬТАЦИЯ</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="../images/services_page/project7.svg" alt="Проект 7">
+        <h3>Сайт для налогового консультанта на Tilda | +50% клиентов за 5 дней</h3>
+        <p>25 000 ₽</p>
+        <div class="project-buttons">
+          <button class="btn primary">ПОДРОБНЕЕ</button>
+          <button class="btn secondary">КОНСУЛЬТАЦИЯ</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="../images/services_page/project7.svg" alt="Проект 8">
+        <h3>Сайт для налогового консультанта на Tilda | +50% клиентов за 5 дней</h3>
+        <p>25 000 ₽</p>
+        <div class="project-buttons">
+          <button class="btn primary">ПОДРОБНЕЕ</button>
+          <button class="btn secondary">КОНСУЛЬТАЦИЯ</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="../images/services_page/project8.svg" alt="Проект 8">
+        <h3>Сайт для налогового консультанта на Tilda | +50% клиентов за 5 дней</h3>
+        <p>25 000 ₽</p>
+        <div class="project-buttons">
+          <button class="btn primary">ПОДРОБНЕЕ</button>
+          <button class="btn secondary">КОНСУЛЬТАЦИЯ</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="../images/services_page/project9.svg" alt="Проект 9">
+        <h3>Сайт для налогового консультанта на Tilda | +50% клиентов за 5 дней</h3>
+        <p>25 000 ₽</p>
+        <div class="project-buttons">
+          <button class="btn primary">ПОДРОБНЕЕ</button>
+          <button class="btn secondary">КОНСУЛЬТАЦИЯ</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="../images/services_page/project10.svg" alt="Проект 10">
+        <h3>Сайт для налогового консультанта на Tilda | +50% клиентов за 5 дней</h3>
+        <p>25 000 ₽</p>
+        <div class="project-buttons">
+          <button class="btn primary">ПОДРОБНЕЕ</button>
+          <button class="btn secondary">КОНСУЛЬТАЦИЯ</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="../images/services_page/project11.svg" alt="Проект 11">
+        <h3>Сайт для налогового консультанта на Tilda | +50% клиентов за 5 дней</h3>
+        <p>25 000 ₽</p>
+        <div class="project-buttons">
+          <button class="btn primary">ПОДРОБНЕЕ</button>
+          <button class="btn secondary">КОНСУЛЬТАЦИЯ</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="../images/services_page/project12.svg" alt="Проект 12">
+        <h3>Сайт для налогового консультанта на Tilda | +50% клиентов за 5 дней</h3>
+        <p>25 000 ₽</p>
+        <div class="project-buttons">
+          <button class="btn primary">ПОДРОБНЕЕ</button>
+          <button class="btn secondary">КОНСУЛЬТАЦИЯ</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="../images/services_page/project13.svg" alt="Проект 13">
+        <h3>Сайт для налогового консультанта на Tilda | +50% клиентов за 5 дней</h3>
+        <p>25 000 ₽</p>
+        <div class="project-buttons">
+          <button class="btn primary">ПОДРОБНЕЕ</button>
+          <button class="btn secondary">КОНСУЛЬТАЦИЯ</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="../images/services_page/project14.svg" alt="Проект 14">
+        <h3>Сайт для налогового консультанта на Tilda | +50% клиентов за 5 дней</h3>
+        <p>25 000 ₽</p>
+        <div class="project-buttons">
+          <button class="btn primary">ПОДРОБНЕЕ</button>
+          <button class="btn secondary">КОНСУЛЬТАЦИЯ</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="../images/services_page/project15.svg" alt="Проект 15">
+        <h3>Сайт для налогового консультанта на Tilda | +50% клиентов за 5 дней</h3>
+        <p>25 000 ₽</p>
+        <div class="project-buttons">
+          <button class="btn primary">ПОДРОБНЕЕ</button>
+          <button class="btn secondary">КОНСУЛЬТАЦИЯ</button>
+        </div>
+      </div>
+      <!-- Другие проекты -->
+    </div>
+
+    <!-- Пагинация -->
+    <div class="pagination">
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <button class="page-btn">→</button>
+    </div>
+  </div>
+</section>
+
+  <!-- Контактные ссылки -->
+  <section class="contact-links-section">
     <div class="container">
-      <h1>Услуги</h1>
-      <p>Каждая карта уникальна. Над каждым дизайном трудится команда настоящих профессионалов.</p>
+      <h2>Закажите разработку сайта под ключ — оставьте заявку прямо сейчас!</h2>
+      <p>Переходите в удобный для вас мессенджер или сразу звоните!</p>
+      <div class="contact-links">
+        <a href="#" class="contact-link whatsapp">
+          <i class="icon-whatsapp"></i>
+          Написать в WhatsApp
+        </a>
+        <a href="#" class="contact-link telegram">
+          <i class="icon-telegram"></i>
+          Написать в Telegram
+        </a>
+        <a href="#" class="contact-link phone">
+          <i class="icon-phone"></i>
+          Позвонить
+        </a>
+        <a href="#" class="contact-link telegram-channel">
+          <i class="icon-telegram"></i>
+          Подписаться на Telegram канал
+        </a>
+      </div>
     </div>
   </section>
 
-  <div class="container">
-    <div class="row">
-      <!-- Левая колонка (меню услуг) -->
-      <aside class="left-column">
-        <h2>Категории</h2>
-        <ul class="categories">
-          <li><a href="#">Дизайн</a></li>
-          <li><a href="#">Продукция из пластика</a>
-            <ul>
-              <li><a href="#">Бонусные карты</a></li>
-              <li><a href="#">Визитки</a></li>
-              <li><a href="#">Дисконтные карты</a></li>
-              <li><a href="#">Информационные таблички</a></li>
-              <li><a href="#">Сертификаты</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Широкоформатная и другая продукция</a>
-            <ul>
-              <li><a href="#">Баннеры</a></li>
-              <li><a href="#">Визитки (картон)</a></li>
-              <li><a href="#">Листовки</a></li>
-              <li><a href="#">Наклейки</a></li>
-            </ul>
-          </li>
-        </ul>
-      </aside>
-
-      <!-- Центральная колонка -->
-      <section class="main-content">
-        <!-- Галерея изображений -->
-        <div class="gallery">
-          <div class="gallery-image active" style="background-image: url('image1.jpg');"></div>
-          <div class="gallery-image" style="background-image: url('image2.jpg');"></div>
-          <div class="gallery-image" style="background-image: url('image3.jpg');"></div>
-          <!-- Переключатели слайдов -->
-          <div class="gallery-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+  <!-- Обсудим ваш проект -->
+  <section class="contact-section">
+    <div class="container">
+      <h2>Обсудим ваш проект</h2>
+      <p>Нужен сайт или у вас остались вопросы? Оставьте свои контакты в форме, я свяжусь с вами в самое ближайшее время.</p>
+      <div class="contact-info">
+        <div class="contact-left">
+          <img src="phone-icon.svg" alt="Телефон">
+          <a href="tel:+79188528365">+7 (918) 852 83 65</a>
+          <div class="social-links">
+            <a href="#"><i class="icon-telegram"></i></a>
+            <a href="#"><i class="icon-whatsapp"></i></a>
           </div>
         </div>
-
-        <!-- Кнопки -->
-        <div class="buttons">
-          <button class="calculate-btn">Рассчитать</button>
-          <button class="callback-btn">
-            <img src="icon-phone.png" alt="Иконка телефона">
-            Обратный Звонок
-          </button>
-        </div>
-
-        <!-- Описание преимуществ -->
-        <section class="benefits">
-          <h2>Мы предлагаем качественный продукт, который поможет Вам:</h2>
-          <ul>
-            <li>Увеличить товарооборот</li>
-            <li>Привлечь внимание клиентов</li>
-            <li>Укрепить имидж организации</li>
-            <li>Проанализировать активность покупателей</li>
-          </ul>
-          <p>У нас большой выбор материалов: белый, прозрачный, золотой, серебряный пластик. Размеры от стандартной карты до табличек формата А4.</p>
-          <p>Также мы будем рады напечатать для Вас листовки, визитки из мелованного картона, наклейки и многое другое.</p>
-          <p>Если Вы только открываетесь, то прекрасным решением будет заказать у нас разработку дизайна и печать баннера. Ваши клиенты будут видеть Вас издалека.</p>
-          <p>В нашем штате также есть художник, который максимально похоже нарисует иллюстрацию с вашей фотографией. Очень интересное решение для привлечения клиентов.</p>
-          <p>Наша команда заинтересована только в качественном товаре, поэтому каждая карта проходит ручную проверку на брак, а дизайнеры работают на результат и предоставляют современные дизайны, учитывая пожелания клиентов.</p>
-          <p>Вместе мы сможем угодить любому клиенту!</p>
-          <p></p>
-          <p>Помогают не только получать скидку в магазине, но и укрепляют связь между продавцом и покупателем, привлекают новых клиентов, предоставляют покупателям возможность воспользоваться гибкой системой скидок.</p>
-        </section>
-      </section>
-
-      <!-- Правая колонка -->
-      <aside class="right-column">
-        <!-- Дополнительные изображения -->
-        <img src="additional-image.jpg" alt="Дополнительное изображение">
-      </aside>
+        <form id="main-contact-form">
+          <input type="text" placeholder="Ваше имя*" required>
+          <input type="tel" placeholder="Телефон*" required>
+          <textarea placeholder="Сообщение" required></textarea>
+          <button type="submit" class="btn primary">Отправить сообщение</button>
+        </form>
+      </div>
     </div>
-  </div>
-</main>
+  </section>
 
+<!-- Подвал -->
 <footer class="site-footer">
   <div class="container">
     <p>© 2025 Печатаем настроение</p>
     <div class="social-links">
-      <a href="https://t.me/whiterabbitcards " target="_blank" rel="noopener noreferrer"><i class="icon-telegram">Telegram</i></a>
-      <a href="https://www.instagram.com/w.rabbit.card/ " target="_blank" rel="noopener noreferrer"><i class="icon-instagram">Instagram</i></a>
-      <a href="https://vk.com/whiterabbitcard " target="_blank" rel="noopener noreferrer"><i class="icon-vk">VK</i></a>
-      <a href="https://www.youtube.com/channel/UC4grkfRVyrmr-Pn9gVZBu6A " target="_blank" rel="noopener noreferrer"><i class="icon-youtube">Youtube</i></a>
-      <a href="https://dzen.ru/whiterabbitcards " target="_blank" rel="noopener noreferrer"><i class="icon-dzen">Dzen</i></a>
-    </div>  
+      <a href="#"><i class="icon-telegram">Telegram</i></a>
+      <a href="#"><i class="icon-instagram">Instagram</i></a>
+    </div>
   </div>
 </footer>
 </body>

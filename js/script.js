@@ -1,137 +1,124 @@
-// Скрипт для слайдера
-document.addEventListener('DOMContentLoaded', function() {
-  const galleryImages = document.querySelectorAll('.gallery-image');
-  const dots = document.querySelectorAll('.gallery-dots .dot');
+// Скрипт для управления анимациями
+document.addEventListener("DOMContentLoaded", function () {
+  // Скрыть начальную анимацию после клика на кнопку
+  const enterUniverseBtn = document.getElementById("enter-universe");
+  const universeAnimation = document.getElementById("universe-animation");
 
-  let currentIndex = 0;
+  enterUniverseBtn.addEventListener("click", function () {
+    universeAnimation.classList.add("hidden");
+  });
 
-  function showSlide(index) {
-    galleryImages.forEach((slide, i) => {
-      slide.classList.remove('active');
-      dots[i].classList.remove('active');
+  // Анимация для перехода между секциями
+  window.addEventListener("scroll", function () {
+    const sections = document.querySelectorAll("section");
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        section.classList.add("visible");
+      } else {
+        section.classList.remove("visible");
+      }
     });
+  });
+});
 
-    galleryImages[index].classList.add('active');
-    dots[index].classList.add('active');
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButtons = document.querySelectorAll(".toggle-button");
+
+  toggleButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const description = this.parentElement.nextElementSibling;
+      if (description.classList.contains("hidden")) {
+        description.classList.remove("hidden");
+        this.textContent = "-";
+      } else {
+        description.classList.add("hidden");
+        this.textContent = "+";
+      }
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const priceSlider = document.querySelector(".price-slider");
+  const priceMin = document.querySelector(".price-min");
+  const priceMax = document.querySelector(".price-max");
+
+  priceSlider.addEventListener("input", function () {
+    priceMin.textContent = `${this.value} ₽`;
+    priceMax.textContent = `${parseInt(this.value) + 20000} ₽`;
+  });
+
+  // Пагинация
+  const pageButtons = document.querySelectorAll(".page-btn");
+  pageButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      if (!this.classList.contains("active")) {
+        pageButtons.forEach((btn) => btn.classList.remove("active"));
+        this.classList.add("active");
+      }
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const priceSlider = document.querySelector(".price-slider");
+  const priceMin = document.querySelector(".price-min");
+  const priceMax = document.querySelector(".price-max");
+
+  // Обновляем значения при изменении ползунка
+  priceSlider.addEventListener("input", function () {
+    priceMin.textContent = `${this.value} ₽`;
+    priceMax.textContent = `${parseInt(this.value) + 20000} ₽`;
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const contactLinks = document.querySelectorAll(".contact-link");
+
+  contactLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      const url = this.getAttribute("href");
+      window.open(url, "_blank");
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("contact-modal");
+  const consultationBtn = document.querySelector(".consultation-btn"); // <-- изменено: убран неправильный селектор
+  const closeModalBtn = document.querySelector(".close-modal");
+
+  // Открыть окно при клике на кнопку "Бесплатная консультация"
+  if (consultationBtn) {
+    consultationBtn.addEventListener("click", function () {
+      modal.classList.remove("hidden");
+      modal.classList.add("show");
+    });
   }
 
-  dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-      showSlide(index);
+  // Закрыть окно по клику вне области
+  modal.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.classList.add("hidden");
+      modal.classList.remove("show");
+    }
+  });
+
+  // Закрыть по крестику
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener("click", function () {
+      modal.classList.add("hidden");
+      modal.classList.remove("show");
     });
-  });
-
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % galleryImages.length;
-    showSlide(currentIndex);
-  }, 3000); // Автоматическая смена слайдов каждые 3 секунды
-});
-
-// Tabs
-document.querySelectorAll('.tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const tabId = btn.dataset.tab;
-
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-
-    btn.classList.add('active');
-    document.querySelector(`.tab-${tabId}`).classList.add('active');
-  });
-});
-
-function showPortfolio(category) {
-  // Получаем все элементы портфолио
-  const portfolioItems = document.querySelectorAll('.card');
-
-  // Сбрасываем активный класс у всех элементов
-  portfolioItems.forEach(item => {
-    item.classList.remove('active');
-  });
-
-  // Показываем элементы, соответствующие выбранной категории
-  portfolioItems.forEach(item => {
-    if (item.dataset.category === category) {
-      item.classList.add('active');
-    }  
-  });
-}
-
-// Обработчик кликов на кнопки табов
-document.querySelectorAll('.tab-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    const category = button.dataset.tab;
-    showPortfolio(category);
-  });
-});
-
-// script.js
-document.addEventListener('DOMContentLoaded', () => {
-  const quantitySelect = document.getElementById('quantity');
-  const plasticTypeSelect = document.getElementById('plastic-type');
-  const holeSelect = document.getElementById('hole');
-  const laminationSelect = document.getElementById('lamination');
-  const frontNumberingSelect = document.getElementById('front-numbering');
-  const contactlessChipSelect = document.getElementById('contactless-chip');
-  const backBarcodeSelect = document.getElementById('back-barcode');
-  const backMagneticStripSelect = document.getElementById('back-magnetic-strip');
-  const backQrCodeSelect = document.getElementById('back-qr-code');
-  const backMagnetSelect = document.getElementById('back-magnet');
-  const pricePerUnitElement = document.getElementById('price-per-unit');
-  const totalPriceElement = document.getElementById('total-price');
-
-  function calculatePrice() {
-    let basePrice = 24; // Base price per unit
-
-    // Add logic to adjust price based on selections
-    if (plasticTypeSelect.value === 'gold' || plasticTypeSelect.value === 'silver') {
-      basePrice += 5;
-    }
-
-    if (holeSelect.value !== 'none') {
-      basePrice += 2;
-    }
-
-    if (laminationSelect.value !== 'standard') {
-      basePrice += 3;
-    }
-
-    if (frontNumberingSelect.value !== 'none') {
-      basePrice += 4;
-    }
-
-    if (contactlessChipSelect.value === 'yes') {
-      basePrice += 10;
-    }
-
-    if (backBarcodeSelect.value === 'yes') {
-      basePrice += 2;
-    }
-
-    if (backMagneticStripSelect.value === 'yes') {
-      basePrice += 3;
-    }
-
-    if (backQrCodeSelect.value === 'yes') {
-      basePrice += 2;
-    }
-
-    if (backMagnetSelect.value === 'yes') {
-      basePrice += 1;
-    }
-
-    const quantity = parseInt(quantitySelect.value);
-    const total = basePrice * quantity;
-
-    pricePerUnitElement.textContent = `${basePrice} ₽`;
-    totalPriceElement.textContent = `${total} ₽`;
   }
 
-  // Attach event listeners
-  [quantitySelect, plasticTypeSelect, holeSelect, laminationSelect, frontNumberingSelect, contactlessChipSelect, backBarcodeSelect, backMagneticStripSelect, backQrCodeSelect, backMagnetSelect].forEach(select => {
-    select.addEventListener('change', calculatePrice);
+  // Закрыть по ESC
+  document.addEventListener("keydown", function (event) {
+    if (!modal.classList.contains("hidden") && event.key === "Escape") {
+      modal.classList.add("hidden");
+      modal.classList.remove("show");
+    }
   });
-
-  // Initial calculation
-  calculatePrice();
 });

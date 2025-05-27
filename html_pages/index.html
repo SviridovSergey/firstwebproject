@@ -6,622 +6,429 @@
   <title>Печатаем настроение</title>
   <link rel="stylesheet" href="../css/main_page.css" />
   <link rel="stylesheet" href="../css/icons.css" />
-  <script src="../js/script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js "></script>
+  <script defer src="../js/script.js"></script>
 </head>
 <body>
+  <!-- Начальная анимация -->
+  <div id="universe-animation" class="hidden">
+    <video autoplay muted loop>
+      <source src="../images/main_page/milky-way.mp4" type="video/mp4">
+    </video>
+    <button id="enter-universe">Погрузиться во вселенную лучших пластиковых карт</button>
+  </div>
 
-<!-- Верхняя панель -->
-<div class="top-bar">
-  <div class="container">
-    <div class="top-bar-social">
-      <a href="#"><i class="icon-telegram"></i></a>
-      <a href="#"><i class="icon-instagram"></i></a>
-      <a href="#"><i class="icon-vk"></i></a>
-      <a href="#"><i class="icon-youtube"></i></a>
-      <a href="#"><i class="icon-plus"></i></a>
-    </div>
-    <div class="top-bar-contact">
-      <span><i class="icon-envelope"></i> whiterrabbitcard@mail.ru</span>
-      <span><i class="icon-phone"></i> +7 923 293 2218</span>
+  <!-- Верхняя панель -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="logo">
+        <img src="../images/main_page/logo-PinkCard-Studio.svg" alt="Логотип PinkCard studio" />
+      </div>
+      <div class="contact-info">
+        <a href="#" class="icon-link">
+          <span>+7 (918) 852 83 65</span>
+        </a>
+        <a href="#">
+          <i class="icon-telegram"></i>
+        </a>
+        <button class="action-btn calculate">Расчитать стоимость сайта</button>
+        <button class="action-btn telegram">Подписаться на Telegram канал</button>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Шапка -->
-<header class="site-header">
-  <div class="container">
-    <a href="index.html" class="logo">
-      <img src="logo-white-rabbit.png" alt="Логотип">
-      <span>WhiteRabbit</span>
-      <p class="tagline">Печатаем настроение</p>
-    </a>
-    <nav class="navbar">
-      <ul class="menu">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="services.html">Услуги</a></li>
-        <li><a href="calculator.html">Калькулятор</a></li>
-        <li><a href="useful.html">Полезное</a></li>
-        <li><a href="contact.html">Контакты</a></li>
+  <!-- Нижняя панель меню -->
+  <nav class="main-menu">
+    <div class="container">
+      <ul>
+        <li><a href="../html_pages/index.html">Главная</a></li>
+        <li><a href="../html_pages/services.html">Портфолио</a></li>
+        <li><a href="#">Отзывы</a></li>
+        <li><a href="#">Стоимость</a></li>
+        <li><a href="#">Полезные статьи</a></li>
+        <li><a href="#">Тайная комната</a></li>
+        <li><a href="#">Контакты</a></li>
       </ul>
-    </nav>
-  </div>
-</header>
+    </div>
+  </nav>
 
-<!-- Слайдер -->
-<section class="hero">
-  <div class="swiper hero-slider">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="slide-content">
-          <h1>Создаём карты, которые запоминаются</h1>
-          <p>Индивидуальный подход к каждому клиенту. Визитки, дисконтные карты, сертификаты.</p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="slide-content">
-          <h1>Профессиональный дизайн под ключ</h1>
-          <p>Создание макета бесплатно. Поддержка от идеи до печати.</p>
-        </div>
+  <!-- Главная секция -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Создаем сайты быстро,</h1>
+        <h1>просто и под ключ</h1>
+        <p class="highlight">для вашего бизнеса</p>
+        <ul class="features-list">
+          <li>Лендинги, корпоративные сайты и интернет-магазины</li>
+          <li>Качественные сайты, которые увеличивают продажи</li>
+          <li>Работаем с современными платформами</li>
+          <li>Используем нейросети для эффективности</li>
+          <li>Подключаем Яндекс рекламу для максимального результата</li>
+        </ul>
+        <p class="ready-to-start">Готовы стартовать?</p>
+        <p class="consultation">Обсудим ваш проект прямо сейчас!</p>
+        <button class="btn primary consultation-btn">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</button>
       </div>
     </div>
-    <!-- Пагинация -->
-    <div class="swiper-pagination"></div>
-  </div>
-</section>
+  </section>
 
-<!-- Услуги -->
-<section class="services">
-  <div class="container">
-    <h2>Наши услуги</h2>
-    <div class="service-grid">
-      <!-- Карточка 1 -->
-      <div class="service-card">
-        <img src="images/certificates.jpg" alt="Сертификаты">
-        <h3>Сертификаты</h3>
-        <button class="btn primary">Подробнее</button>
-      </div>
+  <!-- Модальное окно -->
+  <div id="contact-modal" class="modal hidden">
+    <div class="modal-content">
+      <!-- Кнопка закрытия поверх контента -->
+      <span class="close-modal">&times;</span>
 
-      <!-- Карточка 2 -->
-      <div class="service-card">
-        <img src="images/design.jpg" alt="Дизайн">
-        <h3>Дизайн</h3>
-        <button class="btn primary">Подробнее</button>
-      </div>
-
-      <!-- Карточка 3 -->
-      <div class="service-card">
-        <img src="images/banners.jpg" alt="Баннеры">
-        <h3>Баннеры</h3>
-        <button class="btn primary">Подробнее</button>
-      </div>
-
-      <!-- Карточка 4 -->
-      <div class="service-card">
-        <img src="images/tables.jpg" alt="Таблички">
-        <h3>Таблички</h3>
-        <button class="btn primary">Подробнее</button>
-      </div>
-
-      <!-- Карточка 5 -->
-      <div class="service-card">
-        <img src="images/flyers.jpg" alt="Листовки">
-        <h3>Листовки</h3>
-        <button class="btn primary">Подробнее</button>
-      </div>
-
-      <!-- Карточка 6 -->
-      <div class="service-card">
-        <img src="images/discount-cards.jpg" alt="Дисконтные карты">
-        <h3>Дисконтные карты</h3>
-        <button class="btn primary">Подробнее</button>
-      </div>
-
-      <!-- Карточка 7 -->
-      <div class="service-card">
-        <img src="images/bonus-cards.jpg" alt="Бонусные карты">
-        <h3>Бонусные карты</h3>
-        <button class="btn primary">Подробнее</button>
-      </div>
-
-      <!-- Карточка 8 -->
-      <div class="service-card">
-        <img src="images/business-cards.jpg" alt="Визитки">
-        <h3>Визитки</h3>
-        <button class="btn primary">Подробнее</button>
-      </div>
+      <h2>Отправьте заявку и мы свяжемся с вами в самое ближайшее время</h2>
+      
+      <form id="contact-form">
+        <input type="text" placeholder="Ваше имя" required>
+        
+        <div class="phone-field">
+          <select name="country-code" required>
+            <option value="+7">+7 (Россия)</option>
+            <option value="+380">+380 (Украина)</option>
+            <option value="+375">+375 (Беларусь)</option>
+          </select>
+          <input type="tel" placeholder="+7 (999) 999-99-99" required>
+        </div>
+        
+        <input type="email" placeholder="Ваш Email" required>
+        
+        <label>
+          <input type="checkbox" required>
+          Нажимая на кнопку "отправить", я соглашаюсь с <a href="#">политикой конфиденциальности</a>
+        </label>
+        
+        <button type="submit">ОТПРАВИТЬ</button>
+      </form>
     </div>
   </div>
-</section>
 
-<!-- Портфолио -->
-<section class="portfolio">
-  <div class="container">
-    <h2>Портфолио</h2>
-    <p>Каждая карта уникальна. Над каждым дизайном трудится команда настоящих профессионалов.</p>
-
-    <!-- Табы -->
-    <div class="portfolio-tabs">
-      <button onclick="showPortfolio('discount')" class="tab-btn">Дисконтные</button>
-      <button onclick="showPortfolio('bonus')" class="tab-btn">Бонусные</button>
-      <button onclick="showPortfolio('tables')" class="tab-btn">Таблички</button>
-      <button onclick="showPortfolio('certificates')" class="tab-btn">Сертификаты</button>
-      <button onclick="showPortfolio('buisness')" class="tab-btn">Визитки</button>
-      <button onclick="showPortfolio('Price_lists')" class="tab-btn">Прайс-листы</button>
-      <button onclick="showPortfolio('calendards')" class="tab-btn">Календарики</button>
-      <button onclick="showPortfolio('banners')" class="tab-btn">Баннеры</button>
-      <button onclick="showPortfolio('stickers')" class="tab-btn">Наклейки</button>
-      <button onclick="showPortfolio('caricature-illustrations')" class="tab-btn">Шарж\иллюстрация</button>
-      <button onclick="showPortfolio('flyers')" class="tab-btn">Листовки</button>
+  <!-- Новая секция с информацией -->
+  <section class="about-us">
+    <div class="container">
+      <div class="about-content">
+        <div class="text-box">
+          <h2>Привет! Я Ольга — делаю сайты, которые приносят клиентов</h2>
+          <p>
+            Создаю качественные сайты под ключ: лендинги, корпоративные порталы, интернет-магазины. У меня за плечами более 5 лет работы и более 100 успешных проектов. Работаю не одна — за каждым проектом стоит небольшая, но надёжная команда специалистов: от SEO-настройщиков до Яндекс-рекламы и чат-ботов. И да, мы используем нейросети, которые помогают нам работать быстро и эффективно.
+          </p>
+          <!-- Кликабельные соцсети -->
+          <div class="social-links">
+            <a href="#" target="_blank" rel="noopener noreferrer"><i class="icon-whatsapp"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><i class="icon-vk"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><i class="icon-instagram"></i></a>
+          </div>
+        </div>
+        <div class="image-box">
+          <img src="../images/main_page/woman-coding.svg" alt="Женщина за компьютером" />
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Таб-контент -->
-    <div class="tab-content">
-      <div class="tab tab-1 active">
-        <div class="card-grid">
-          <div class="card" data-category="discount">
-            <img src="../images/portfolio/discount1.svg" alt="Дисконтная карта">
+  <!-- Секция Что мы можем сделать для вас -->
+  <section class="services-offered">
+    <div class="container">
+      <h2>Что мы можем сделать для вас?</h2>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Лендинг — чтобы рассказать о вас просто и понятно</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Собираем лендинг так, чтобы он зацепил и вовлёк. Вы получаете стильный сайт, который помогает продавать, а не пылиться в интернете.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Корпоративный сайт — для имиджа и уверенности</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Сайт, который поднимет ваш авторитет и покажет, что вы серьёзный игрок на рынке. Стильно, удобно, без лишнего пафоса.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Интернет-магазин — для онлайн-продаж</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Поможем открыть магазин, где всё просто и удобно — от оформления витрины до онлайн-оплаты. Интернет-магазин под ключ — продажи без хлопот.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Подключение Яндекс-рекламы, Яндекс Метрики и Яндекс Бизнес</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Запустим Яндекс Директ для новых клиентов, Яндекс Метрику — чтобы видеть результат, и Яндекс Бизнес — для ещё большего охвата.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Разработка чат-ботов и телеграм-каналов</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Создадим чат-бота, который будет работать за вас — собирать заявки, консультировать клиентов. Плюс поможем с телеграм-каналом, чтобы вы были на связи с аудиторией.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Настройка SEO и адаптация под голосовой поиск</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Сделаем так, чтобы вас находили не только люди, но и голосовые ассистенты. SEO-настройка и работа с голосовым поиском — чтобы быть первым в выдаче.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Копирайтинг — тексты, которые цепляют</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Надо написать текст? Легко! Копирайтер сделает так, чтобы каждый заголовок цеплял, а текст продавал.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Создание изображений — картинки, которые привлекают</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Мы сами подбираем и обрабатываем картинки для вашего сайта — яркие, стильные и понятные. Чтобы визуал тоже продавал.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Почему клиенты доверяют нам -->
+  <section class="trust-section">
+    <div class="container">
+      <h2>Почему клиенты доверяют нам?</h2>
+      <p>Потому что мы умеем слушать. Для нас сайт — это не только дизайн, а целая история о вас и для вас.</p>
+      <div class="trust-reasons">
+        <div class="reason">
+          <h3>Честно</h3>
+          <p>цены без накруток</p>
+        </div>
+        <div class="reason">
+          <h3>Просто</h3>
+          <p>понятный процесс и никакой бюрократии</p>
+        </div>
+        <div class="reason">
+          <h3>Современно</h3>
+          <p>работаем с нейросетями и новыми технологиями</p>
+        </div>
+        <div class="reason">
+          <h3>Лично</h3>
+          <p>вы знаете, с кем работаете</p>
+        </div>
+      </div>
+      <button class="btn primary consult-btn">ОБСУДИТЬ ВАШ ПРОЕКТ</button>
+    </div>
+  </section>
+
+  <!-- Примеры наших работ -->
+  <section class="portfolio-section">
+    <div class="container">
+      <h2>Примеры наших работ</h2>
+      <div class="portfolio-grid">
+        <!-- Каждый проект -->
+        <div class="portfolio-item">
+          <img src="project1.svg" alt="Проект 1">
+        </div>
+        <div class="portfolio-item">
+          <img src="project2.svg" alt="Проект 2">
+        </div>
+        <div class="portfolio-item">
+          <img src="project3.svg" alt="Проект 3">
+        </div>
+        <div class="portfolio-item">
+          <img src="project4.svg" alt="Проект 4">
+        </div>
+        <div class="portfolio-item">
+          <img src="project5.svg" alt="Проект 5">
+        </div>
+        <div class="portfolio-item">
+          <img src="project6.svg" alt="Проект 6">
+        </div>
+        <div class="portfolio-item">
+          <img src="project7.svg" alt="Проект 7">
+        </div>
+        <div class="portfolio-item">
+          <img src="project8.svg" alt="Проект 8">
+        </div>
+        <div class="portfolio-item">
+          <img src="project9.svg" alt="Проект 9">
+        </div>
+        <div class="portfolio-item">
+          <img src="project10.svg" alt="Проект 10">
+        </div>
+      </div>
+      <div class="portfolio-summary">
+        <p>Лучше один раз увидеть! Мы собрали для вас кейсы, чтобы вы убедились: сайты — это красиво и эффективно.</p>
+        <button class="btn primary view-btn">ПОСМОТРЕТЬ ПОРТФОЛИО</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Сколько стоит? -->
+  <section class="pricing-section">
+    <div class="container">
+      <h2>Сколько стоит?</h2>
+      <p>Мы любим честность и прозрачность — здесь вы сразу видите, во сколько обойдётся сайт. Никаких скрытых платежей, «доплат» и непонятных тарифов.</p>
+      <div class="pricing-content">
+        <div class="pricing-left">
+          <h3>Что входит в стоимость:</h3>
+          <ul>
+            <li>Разработка сайта под ключ</li>
+            <li>Доработки и адаптация</li>
+            <li>Подключение аналитики и рекламы</li>
+            <li>Настройка SEO и помощь с текстами</li>
+            <li>Подключение нейросетей (там, где это нужно)</li>
+          </ul>
+          <p>Все подробности — в разделе <a href="#">Цены</a></p>
+        </div>
+        <div class="pricing-right">
+          <h3>Примерный диапазон цен:</h3>
+          <div class="price-item">
+            <span>Лендинг</span>
+            <span>от 25 000 ₽</span>
           </div>
-          <div class="card" data-category="discount">
-            <img src="../images/portfolio/discount2.svg" alt="Дисконтная карта">
+          <div class="price-item">
+            <span>Корпоративный сайт</span>
+            <span>от 40 000 ₽</span>
           </div>
-          <div class="card" data-category="discount">
-            <img src="../images/portfolio/discount3.svg" alt="Дисконтная карта">
+          <div class="price-item">
+            <span>Интернет-магазин</span>
+            <span>от 50 000 ₽</span>
           </div>
-          <div class="card" data-category="discount">
-            <img src="../images/portfolio/discount4.svg" alt="Дисконтная карта">
-          </div>
-          <div class="card" data-category="discount">
-            <img src="../images/portfolio/discount5.svg" alt="Дисконтная карта">
-          </div>
-          <div class="card" data-category="discount">
-            <img src="../images/portfolio/discount6.svg" alt="Дисконтная карта">
+          <div class="price-item">
+            <span>Доработки и сопровождение</span>
+            <span>по договорённости</span>
           </div>
         </div>
       </div>
-      <div class="tab tab-2">
-        <div class="card-grid">
-          <div class="card" data-category="bonus">
-            <img src="../images/portfolio/bonus1.svg" alt="Бонусная карта">
-          </div>
-          <div class="card" data-category="bonus">
-            <img src="../images/portfolio/bonus2.svg" alt="Бонусная карта">
-          </div>
-          <div class="card" data-category="bonus">
-            <img src="../images/portfolio/bonus3.svg" alt="Бонусная карта">
-          </div>
-          <div class="card" data-category="bonus">
-            <img src="../images/portfolio/bonus4.svg" alt="Бонусная карта">
-          </div>
-          <div class="card" data-category="bonus">
-            <img src="../images/portfolio/bonus5.svg" alt="Бонусная карта">
-          </div>
-          <div class="card" data-category="bonus">
-            <img src="../images/portfolio/bonus6.svg" alt="Бонусная карта">
-          </div>
-        </div>
-        <div class="card-grid">
-          <div class="card" data-category="tables">
-            <img src="../images/portfolio/tables1.svg" alt="Таблички">
-          </div>
-          <div class="card" data-category="tables">
-            <img src="../images/portfolio/tables2.svg" alt="Таблички">
-          </div>
-          <div class="card" data-category="tables">
-            <img src="../images/portfolio/tables3.svg" alt="Таблички">
-          </div>
-          <div class="card" data-category="tables">
-            <img src="../images/portfolio/tables4.svg" alt="Таблички">
-          </div>
-          <div class="card" data-category="tables">
-            <img src="../images/portfolio/tables5.svg" alt="Таблички">
-          </div>
-          <div class="card" data-category="tables">
-            <img src="../images/portfolio/tables6.svg" alt="Таблички">
-          </div>
-        </div>
-        <div class="card-grid">
-          <div class="card" data-category="certificates">
-            <img src="../images/portfolio/certificates1.svg" alt="Сертификаты">
-          </div>
-          <div class="card" data-category="certificates">
-            <img src="../images/portfolio/certificates2.svg" alt="Сертификаты">
-          </div>
-          <div class="card" data-category="certificates">
-            <img src="../images/portfolio/certificates3.svg" alt="Сертификаты">
-          </div>
-          <div class="card" data-category="certificates">
-            <img src="../images/portfolio/certificates4.svg" alt="Сертификаты">
-          </div>
-          <div class="card" data-category="certificates">
-            <img src="../images/portfolio/certificates5.svg" alt="Сертификаты">
-          </div>
-          <div class="card" data-category="certificates">
-            <img src="../images/portfolio/certificates6.svg" alt="Сертификаты">
-          </div>
-        </div>
-        <div class="card-grid">
-          <div class="card" data-category="buisness">
-            <img src="../images/portfolio/buisness1.svg" alt="Визитки">
-          </div>
-          <div class="card" data-category="buisness">
-            <img src="../images/portfolio/buisness2.svg" alt="Визитки">
-          </div>
-          <div class="card" data-category="buisness">
-            <img src="../images/portfolio/buisness3.svg" alt="Визитки">
-          </div>
-          <div class="card" data-category="buisness">
-            <img src="../images/portfolio/buisness4.svg" alt="Визитки">
-          </div>
-          <div class="card" data-category="buisness">
-            <img src="../images/portfolio/buisness5.svg" alt="Визитки">
-          </div>
-          <div class="card" data-category="buisness">
-            <img src="../images/portfolio/buisness6.svg" alt="Визитки">
-          </div>
-        </div>
-        <div class="card-grid">
-          <div class="card" data-category="Price_lists">
-            <img src="../images/portfolio/Price_lists1.svg" alt="Прайс-листы">
-          </div>
-          <div class="card" data-category="Price_lists">
-            <img src="../images/portfolio/Price_lists2.svg" alt="Прайс-листы">
-          </div>
-          <div class="card" data-category="Price_lists">
-            <img src="../images/portfolio/Price_lists3.svg" alt="Прайс-листы">
-          </div>
-          <div class="card" data-category="Price_lists">
-            <img src="../images/portfolio/Price_lists4.svg" alt="Прайс-листы">
-          </div>
-          <div class="card" data-category="Price_lists">
-            <img src="../images/portfolio/Price_lists5.svg" alt="Прайс-листы">
-          </div>
-          <div class="card" data-category="Price_lists">
-            <img src="../images/portfolio/Price_lists6.svg" alt="Прайс-листы">
-          </div>
-        </div>
-        <div class="card-grid">
-          <div class="card" data-category="calendards">
-            <img src="../images/portfolio/calendards1.svg" alt="Календарики">
-          </div>
-          <div class="card" data-category="calendards">
-            <img src="../images/portfolio/calendards2.svg" alt="Календарики">
-          </div>
-          <div class="card" data-category="calendards">
-            <img src="../images/portfolio/calendards3.svg" alt="Календарики">
-          </div>
-          <div class="card" data-category="calendards">
-            <img src="../images/portfolio/calendards4.svg" alt="Календарики">
-          </div>
-          <div class="card" data-category="calendards">
-            <img src="../images/portfolio/calendards5.svg" alt="Календарики">
-          </div>
-          <div class="card" data-category="calendards">
-            <img src="../images/portfolio/calendards6.svg" alt="Календарики">
-          </div>
-        </div>
-        <div class="card-grid">
-          <div class="card" data-category="banners">
-            <img src="../images/portfolio/banners1.svg" alt="Баннеры">
-          </div>
-          <div class="card" data-category="banners">
-            <img src="../images/portfolio/banners2.svg" alt="Баннеры">
-          </div>
-          <div class="card" data-category="banners">
-            <img src="../images/portfolio/banners3.svg" alt="Баннеры">
-          </div>
-          <div class="card" data-category="banners">
-            <img src="../images/portfolio/banners4.svg" alt="Баннеры">
-          </div>
-          <div class="card" data-category="banners">
-            <img src="../images/portfolio/banners5.svg" alt="Баннеры">
-          </div>
-          <div class="card" data-category="banners">
-            <img src="../images/portfolio/banners6.svg" alt="Баннеры">
-          </div>
-        </div>
-        <div class="card-grid">
-          <div class="card" data-category="stickers">
-            <img src="../images/portfolio/stickers1.svg" alt="Наклейки">
-          </div>
-          <div class="card" data-category="stickers">
-            <img src="../images/portfolio/stickers2.svg" alt="Наклейки">
-          </div>
-          <div class="card" data-category="stickers">
-            <img src="../images/portfolio/stickers3.svg" alt="Наклейки">
-          </div>
-          <div class="card" data-category="stickers">
-            <img src="../images/portfolio/stickers4.svg" alt="Наклейки">
-          </div>
-          <div class="card" data-category="stickers">
-            <img src="../images/portfolio/stickers5.svg" alt="Наклейки">
-          </div>
-          <div class="card" data-category="stickers">
-            <img src="../images/portfolio/stickers6.svg" alt="Наклейки">
-          </div>
-      </div>
-      <div class="card-grid">
-          <div class="card" data-category="caricature-illustrations">
-            <img src="../images/portfolio/caricature-illustrations1.svg" alt="Шарж\иллюстрация">
-          </div>
-          <div class="card" data-category="caricature-illustrations">
-            <img src="../images/portfolio/caricature-illustrations2.svg" alt="Шарж\иллюстрация">
-          </div>
-          <div class="card" data-category="caricature-illustrations">
-            <img src="../images/portfolio/caricature-illustrations3.svg" alt="Шарж\иллюстрация">
-          </div>
-          <div class="card" data-category="caricature-illustrations">
-            <img src="../images/portfolio/caricature-illustrations4.svg" alt="Шарж\иллюстрация">
-          </div>
-          <div class="card" data-category="caricature-illustrations">
-            <img src="../images/portfolio/caricature-illustrations5.svg" alt="Шарж\иллюстрация">
-          </div>
-          <div class="card" data-category="caricature-illustrations">
-            <img src="../images/portfolio/caricature-illustrations6.svg" alt="Шарж\иллюстрация">
-          </div>
-      </div>
-      <div class="card-grid">
-          <div class="card" data-category="flyers">
-            <img src="../images/portfolio/flyers1.svg" alt="Наклейки">
-          </div>
-          <div class="card" data-category="flyers">
-            <img src="../images/portfolio/flyers2.svg" alt="Наклейки">
-          </div>
-          <div class="card" data-category="flyers">
-            <img src="../images/portfolio/flyers3.svg" alt="Наклейки">
-          </div>
-          <div class="card" data-category="flyers">
-            <img src="../images/portfolio/flyers4.svg" alt="Наклейки">
-          </div>
-          <div class="card" data-category="flyers">
-            <img src="../images/portfolio/flyers5.svg" alt="Наклейки">
-          </div>
-          <div class="card" data-category="flyers">
-            <img src="../images/portfolio/flyers6.svg" alt="Наклейки">
-          </div>
+      <div class="pricing-footer">
+        <p>Хотите узнать точную цену под ваш проект? Оставьте заявку, и я рассчитаю стоимость с учётом ваших задач — быстро и понятно.</p>
+        <button class="btn primary view-btn">ПОСМОТРЕТЬ ПОЛНЫЙ ПРАЙС</button>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Таблица цен -->
-<section class="price-list">
-  <div class="container">
-    <h2>Прайс-лист</h2>
-    <p>Тиражи свыше 1000 карт рассчитываются индивидуально</p>
-    <div class="price-table-container">
-
-      <!-- Пластиковые карты -->
-      <div class="price-table">
-        <div class="header-section">
-          <img src="icon-plastic-card.png" alt="Иконка пластиковой карты" class="header-icon">
-          <span>Пластиковые карты</span>
+  <!-- Отзывы -->
+  <section class="reviews-section">
+    <div class="container">
+      <h2>Отзывы</h2>
+      <div class="review-item">
+        <img src="avatar1.jpg" alt="Аватар клиента">
+        <div class="review-content">
+          <strong>Анастасия</strong>
+          <p>Интернет-магазин для питомника роз на Tilda под ключ | <a href="#">Пример работы</a></p>
+          <p>Ольга! Хочу выразить вам огромную благодарность за отлично выполненную работу и оставить свой довольный отзыв! Передо мной стояла задача найти профессионала для создания интернет-магазина нашего питомника роз. Я нашла рекламу Ольги на просторах интернета, написала в Telegram. Ответ последовал очень быстро и четко по делу. Сравнивая нескольких претендентов...</p>
+          <p></p>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Количество</th>
-              <th>Белый | Цветной</th>
-              <th>Золото | Серебро</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>50 шт</td>
-              <td>24 ₽</td>
-              <td>27 ₽</td>
-            </tr>
-            <tr>
-              <td>100 шт</td>
-              <td>19 ₽</td>
-              <td>23 ₽</td>
-            </tr>
-            <tr>
-              <td>200 шт</td>
-              <td>18 ₽</td>
-              <td>21 ₽</td>
-            </tr>
-            <tr>
-              <td>300 шт</td>
-              <td>17 ₽</td>
-              <td>20 ₽</td>
-            </tr>
-            <tr>
-              <td>400 шт</td>
-              <td>16 ₽</td>
-              <td>18 ₽</td>
-            </tr>
-            <tr>
-              <td>500 шт</td>
-              <td>15 ₽</td>
-              <td>18 ₽</td>
-            </tr>
-            <tr>
-              <td>1000 шт</td>
-              <td>14 ₽</td>
-              <td>17 ₽</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
-
-      <!-- Сертификаты и таблички -->
-      <div class="price-table">
-        <div class="header-section">
-          <img src="icon-certificate.png" alt="Иконка сертификата" class="header-icon">
-          <span>Сертификаты, Таблички</span>
+      <div class="review-item">
+        <div class="review-content">
+          <strong>Владимир</strong>
+          <p>Корпоративный сайт для энергетической компании | <a href="#">Пример работы</a></p>
+          <p>Ольга, благодарю за сотрудничество, успешную разработку и запуск второго уже, нового сайта для моего бизнеса. Как всегда – всё чётко и оперативно. Еще хочу поблагодарить за тех. поддержку в течение года по первому проекту. В планах обратиться и за третьим проектом, уже в начале 25-го года. Успехов Вам в творческой деятельности и несгибаемого профессионализма!</p>
+          <p></p>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Формат</th>
-              <th>Прозрачный</th>
-              <th>Белый | Цветной | Чер.</th>
-              <th>Золото | Серебро</th>
-              <th>Инста метка</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>A4 (210x297)</td>
-              <td>500 ₽</td>
-              <td>400 ₽</td>
-              <td>500 ₽</td>
-              <td>1000 ₽</td>
-            </tr>
-            <tr>
-              <td>A5 (148x210)</td>
-              <td>280 ₽</td>
-              <td>220 ₽</td>
-              <td>280 ₽</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>A6 (105x148)</td>
-              <td>140 ₽</td>
-              <td>110 ₽</td>
-              <td>140 ₽</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>A7 (74x105)</td>
-              <td>85 ₽</td>
-              <td>75 ₽</td>
-              <td>85 ₽</td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
+        <img src="avatar2.jpg" alt="Аватар клиента">
+      </div>
+      <div class="reviews-summary">
+        <p>Наши клиенты уже оценили, что значит работать с командой, которая понимает их</p>
+        <button class="btn primary view-btn">ЧИТАТЬ ОТЗЫВЫ</button>
       </div>
     </div>
+  </section>
 
-    <!-- Пластиковые карты -->
-      <div class="price-table">
-        <div class="header-section">
-          <img src="icon-plastic-card.png" alt="Иконка пластиковой карты" class="header-icon">
-          <span>Пластиковые карты</span>
+  <!-- Статьи для бизнеса -->
+  <section class="articles-section">
+    <div class="container">
+      <h2>Статьи для бизнеса</h2>
+      <p>Делимся опытом, рассказываем о трендах и полезных фишках.</p>
+      <div class="article-grid">
+        <div class="article-card">
+          <img src="article1.jpg" alt="Статья 1">
+          <h3>90% сайтов — мертый груз. Ваш, скорее всего, тоже</h3>
+          <p class="date">27.05.2025</p>
+          <a href="#">Читать статью →</a>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Количество</th>
-              <th>Белый | Цветной</th>
-              <th>Золото | Серебро</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>50 шт</td>
-              <td>29 ₽</td>
-              <td>26 ₽</td>
-            </tr>
-            <tr>
-              <td>100 шт</td>
-              <td>24 ₽</td>
-              <td>21 ₽</td>
-            </tr>
-            <tr>
-              <td>200 шт</td>
-              <td>23.5 ₽</td>
-              <td>20 ₽</td>
-            </tr>
-            <tr>
-              <td>300 шт</td>
-              <td>23 ₽</td>
-              <td>19 ₽</td>
-            </tr>
-            <tr>
-              <td>400 шт</td>
-              <td>22 ₽</td>
-              <td>18 ₽</td>
-            </tr>
-            <tr>
-              <td>500 шт</td>
-              <td>21 ₽</td>
-              <td>17 ₽</td>
-            </tr>
-            <tr>
-              <td>1000 шт</td>
-              <td>20 ₽</td>
-              <td>16 ₽</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-<!-- Информационные блоки -->
-<div class="additional-info">
-  <div class="info-block">
-    <div class="info-icon">
-      <i class="icon-info">!</i>
-    </div>
-    <div class="info-text">
-      <p>Дизайн - 700 р., или печать по вашему макету</p>
-      <p>Покрытие: матовое / глянец не влияет на цену</p>
-    </div>
-  </div>
-  <div class="info-block">
-    <div class="info-icon">
-      <i class="icon-info">!</i>
-    </div>
-    <div class="info-text">
-      <p>Покрытие: матовое / глянец не влияет на цену</p>
-      <p>Углы можно оставить прямыми, или скруглить</p>
-    </div>
-  </div>
-</div>
-
-    <!-- Кнопка расчета -->
-    <div class="calculate-btn-container">
-      <button class="calculate-btn">
-        <img src="icon-calculator.png" alt="Иконка калькулятора"> Рассчитать стоимость
-      </button>
-    </div>
-  </div>
-</section>
-
-
-<!-- Отзывы -->
-<section class="reviews">
-  <div class="container">
-    <h2>Отзывы наших клиентов</h2>
-    <div class="swiper reviews-slider">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide review-item">
-          <p>“Заказывали визитки для студии дизайна. Получилось очень стильно и необычно. Рекомендуем!”</p>
-          <strong>— Ирина, Москва</strong>
+        <div class="article-card">
+          <img src="article2.jpg" alt="Статья 2">
+          <h3>Как я сжигал 87 000 ₽ в месяц на рекламу</h3>
+          <p class="date">27.05.2025</p>
+          <a href="#">Читать статью →</a>
         </div>
-        <!-- Другие отзывы -->
+        <div class="article-card">
+          <img src="article3.jpg" alt="Статья 3">
+          <h3>Заявок нет, но мы держимся ;) Как выжить без заявок?</h3>
+          <p class="date">27.05.2025</p>
+          <a href="#">Читать статью →</a>
+        </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <button class="btn primary view-btn">ПОСМОТРЕТЬ ВСЕ СТАТЬИ</button>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Форма обратной связи -->
-<section class="contact-form">
-  <div class="container">
-    <h2>Свяжитесь с нами</h2>
-    <form id="main-contact-form">
-      <input type="text" placeholder="Ваше имя" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Сообщение" required></textarea>
-      <button type="submit" class="btn primary">Отправить</button>
-    </form>
-  </div>
-</section>
-
-<!-- Подвал -->
-<footer class="site-footer">
-  <div class="container">
-    <p>© 2025 Печатаем настроение</p>
-    <div class="social-links">
-      <a href="https://pink-card.ru/ " target="_blank" rel="noopener noreferrer"><i class="icon-telegram">Telegram</i></a>
-      <a href="https://www.instagram.com/w.rabbit.card/ " target="_blank" rel="noopener noreferrer"><i class="icon-instagram">Instagram</i></a>
+  <!-- Обсудим ваш проект -->
+  <section class="contact-section">
+    <div class="container">
+      <h2>Обсудим ваш проект</h2>
+      <p>Нужен сайт или у вас остались вопросы? Оставьте свои контакты в форме, я свяжусь с вами в самое ближайшее время.</p>
+      <div class="contact-info">
+        <div class="contact-left">
+          <img src="phone-icon.svg" alt="Телефон">
+          <a href="tel:+79188528365">+7 (918) 852 83 65</a>
+          <div class="social-links">
+            <a href="#"><i class="icon-telegram"></i></a>
+            <a href="#"><i class="icon-whatsapp"></i></a>
+          </div>
+        </div>
+        <form id="main-contact-form">
+          <input type="text" placeholder="Ваше имя*" required>
+          <input type="tel" placeholder="Телефон*" required>
+          <textarea placeholder="Сообщение" required></textarea>
+          <button type="submit" class="btn primary">Отправить сообщение</button>
+        </form>
+      </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<!-- Swiper JS -->
-<script src="../js/swiper-bundle.min.js"></script>
+  <!-- Подвал -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Печатаем настроение</p>
+      <div class="social-links">
+        <a href="#"><i class="icon-telegram">Telegram</i></a>
+        <a href="#"><i class="icon-instagram">Instagram</i></a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
