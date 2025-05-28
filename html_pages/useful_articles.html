@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Печатаем настроение</title>
+  <link rel="stylesheet" href="../css/main_page.css"/>
+  <link rel="stylesheet" href="../css/services_page.css"/>
+  <link rel="stylesheet" href="../css/usefull_page.css"/>
+  <link rel="stylesheet" href="../css/calculator_page.css"/>
+  <link rel="stylesheet" href="../css/useful_articles.css"/>
+  <link rel="stylesheet" href="../css/icons.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js "></script>
+  <script defer src="../js/script.js"></script>
+</head>
+<body>
+
+  <!-- Начальная анимация -->
+  <div id="universe-animation" class="hidden">
+    <video autoplay muted loop>
+      <source src="milky-way.mp4" type="video/mp4">
+    </video>
+    <button id="enter-universe">Погрузиться во вселенную лучших пластиковых карт</button>
+  </div>
+
+  <!-- Верхняя панель -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="logo">
+        <img src="../images/main_page/logo-PinkCard-Studio.svg" alt="Логотип PinkCard studio" />
+      </div>
+      <div class="contact-info">
+        <a href="#" class="icon-link">
+          <span>+7 (918) 852 83 65</span>
+        </a>
+        <a href="#">
+          <i class="icon-telegram"></i>
+        </a>
+        <button class="action-btn calculate">Расчитать стоимость сайта</button>
+        <button class="action-btn telegram">Подписаться на Telegram канал</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Нижняя панель меню -->
+  <nav class="main-menu">
+    <div class="container">
+      <ul>
+        <li><a href="../html_pages/index.html">Главная</a></li>
+        <li><a href="../html_pages/services.html">Портфолио</a></li>
+        <li><a href="../html_pages/useful.html">Отзывы</a></li>
+        <li><a href="../html_pages/calculator.html">Стоимость</a></li>
+        <li><a href="../html_pages/useful_articles.html">Полезные статьи</a></li>
+        <li><a href="#">Тайная комната</a></li>
+        <li><a href="../html_pages/contact.html">Контакты</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="articles-section">
+    <div class="container">
+      <h2>Полезные статьи и кейсы по созданию сайтов</h2>
+      <p>
+        Наш блог — это собрание полезных статей и кейсов по созданию сайтов на Tilda, веб-дизайну, юзабилити, маркетингу и продвижению. В этой рубрике вы найдёте подробные инструкции: от подготовки ТЗ и подбора структуры до анализа рекламных кампаний и финансовых расчётов. Каждый материал сопровождается реальными примерами, чтобы вы могли сразу применять полученные знания. Читайте статьи и кейсы от наших экспертов, чтобы создавать продающие сайты, оптимизировать бюджеты и повышать лояльность клиентов.
+      </p>
+
+      <!-- Tabs for filtering articles -->
+      <div class="article-tabs">
+        <button class="tab-button active" data-tab="all">Все</button>
+        <button class="tab-button" data-tab="business">Зачем бизнесу сайт?</button>
+        <button class="tab-button" data-tab="promotion">Продвижение и результат</button>
+        <button class="tab-button" data-tab="sharp-corners">Острые углы бизнеса</button>
+        <button class="tab-button" data-tab="questions">Вопросы и страхи</button>
+        <button class="tab-button" data-tab="mixed">Смешное</button>
+      </div>
+
+      <!-- Article cards -->
+      <div class="article-grid">
+
+        <!-- Article card 1 -->
+        <div class="article-card" data-category="promotion">
+            <a href="../backup_pages/useful_articles1.html">
+                <img src="SEO-promo.png" alt="SEO-продвижение простыми словами">
+            </a>
+          <div class="article-content">
+            <h3>SEO-продвижение простыми словами: что это такое и как работает</h3>
+            <p class="category">ПРОДВИЖЕНИЕ И РЕЗУЛЬТАТ</p>
+            <p class="date">28.05.2025</p>
+          </div>
+        </div>
+
+        <!-- Article card 2 -->
+        <div class="article-card" data-category="sharp-corners">
+          <a href="../backup_pages/useful_articles2.html">
+            <img src="no-leads.png" alt="Заявок нет, но мы держимся">
+          </a>
+          <div class="article-content">
+            <h3>Как выжить без заявок?</h3>
+            <p class="category">ВОПРОСЫ И СТРАХИ - ОСТРЫЕ УГЛЫ БИЗНЕСА</p>
+            <p class="date">21.05.2025</p>
+          </div>
+        </div>
+
+        <!-- Article card 3 -->
+        <div class="article-card" data-category="promotion">
+          <a href="../backup_pages/useful_articles3.html">
+            <img src="site-cost.png" alt="Расчет стоимости сайта">
+          </a>
+          <div class="article-content">
+            <h3>Узнайте реальную стоимость вашего сайта</h3>
+            <p class="category">ЗАЧЕМ БИЗНЕСУ САЙТ?</p>
+            <p class="date">23.04.2025</p>
+          </div>
+        </div>
+
+        <!-- Article card 4 -->
+        <div class="article-card" data-category="sharp-corners">
+          <a href="../backup_pages/useful_articles4.html">
+            <img src="dead-sites.png" alt="90% сайтов – мертвый груз">
+          </a>
+          <div class="article-content">
+            <h3>90% сайтов – мертвый груз. Ваш, скорее всего, тоже</h3>
+            <p class="category">ОСТРЫЕ УГЛЫ БИЗНЕСА</p>
+            <p class="date">22.04.2025</p>
+          </div>
+        </div>
+
+        <!-- Article card 5 -->
+        <div class="article-card" data-category="sharp-corners">
+          <a href="../backup_pages/useful_articles5.html">
+            <img src="burning-money.png" alt="Как я сжигал 87 000 ₽ в месяц на рекламу">
+          </a>
+          <div class="article-content">
+            <h3>Как я сжигал 87 000 ₽ в месяц на рекламу</h3>
+            <p class="category">ОСТРЫЕ УГЛЫ БИЗНЕСА</p>
+            <p class="date">19.04.2025</p>
+          </div>
+        </div>
+
+        <!-- Article card 6 -->
+        <div class="article-card" data-category="sharp-corners">
+          <a href="../backup_pages/useful_articles6.html">
+            <img src="clients-harm.png" alt="Как клиенты могут убивать ваш бизнес">
+          </a>
+          <div class="article-content">
+            <h3>Как клиенты могут убивать ваш бизнес и что с этим делать</h3>
+            <p class="category">ОСТРЫЕ УГЛЫ БИЗНЕСА</p>
+            <p class="date">18.04.2025</p>
+          </div>
+        </div>
+
+        <!-- Article card 7 -->
+        <div class="article-card" data-category="mixed">
+          <a href="../backup_pages/useful_articles7.html">
+            <img src="buy-button.png" alt="Кнопка «Купить»: как довести дизайнера до белого каления за 10 шагов">
+          </a>
+          <div class="article-content">
+            <h3>Кнопка «Купить»: как довести дизайнера до белого каления за 10 шагов</h3>
+            <p class="category">СМЕШНОЕ</p>
+            <p class="date">17.04.2025</p>
+          </div>
+        </div>
+
+        <!-- Article card 8 -->
+        <div class="article-card" data-category="mixed">
+          <a href="../backup_pages/useful_articles8.html">
+            <img src="magic-cat.png" alt="Когда ТЗ превращается в квест">
+          </a>
+          <div class="article-content">
+            <h3>Когда ТЗ превращается в квест: как заказать сайт на Tilda без нервов и слез</h3>
+            <p class="category">СМЕШНОЕ</p>
+            <p class="date">16.04.2025</p>
+          </div>
+        </div>
+
+        <!-- Article card 9 -->
+        <div class="article-card" data-category="mixed">
+          <a href="../backup_pages/useful_articles9.html">
+            <img src="funny-designer.png" alt="История одной кнопки">
+          </a>
+          <div class="article-content">
+            <h3>Немного юмора из жизни дизайнера</h3>
+            <p class="category">СМЕШНОЕ</p>
+            <p class="date">15.04.2025</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Контактные ссылки -->
+  <section class="contact-links-section">
+    <div class="container">
+      <h2>Закажите разработку сайта под ключ — оставьте заявку прямо сейчас!</h2>
+      <p>Переходите в удобный для вас мессенджер или сразу звоните!</p>
+      <div class="contact-links">
+        <a href="#" class="contact-link whatsapp">
+          <i class="icon-whatsapp"></i>
+          Написать в WhatsApp
+        </a>
+        <a href="#" class="contact-link telegram">
+          <i class="icon-telegram"></i>
+          Написать в Telegram
+        </a>
+        <a href="#" class="contact-link phone">
+          <i class="icon-phone"></i>
+          Позвонить
+        </a>
+        <a href="#" class="contact-link telegram-channel">
+          <i class="icon-telegram"></i>
+          Подписаться на Telegram канал
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Обсудим ваш проект -->
+  <section class="contact-section">
+    <div class="container">
+      <h2>Обсудим ваш проект</h2>
+      <p>Нужен сайт или у вас остались вопросы? Оставьте свои контакты в форме, я свяжусь с вами в самое ближайшее время.</p>
+      <div class="contact-info">
+        <div class="contact-left">
+          <img src="phone-icon.svg" alt="Телефон">
+          <a href="tel:+79188528365">+7 (918) 852 83 65</a>
+          <div class="social-links">
+            <a href="#"><i class="icon-telegram"></i></a>
+            <a href="#"><i class="icon-whatsapp"></i></a>
+          </div>
+        </div>
+        <form id="main-contact-form">
+          <input type="text" placeholder="Ваше имя*" required>
+          <input type="tel" placeholder="Телефон*" required>
+          <textarea placeholder="Сообщение" required></textarea>
+          <button type="submit" class="btn primary">Отправить сообщение</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Подвал -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Печатаем настроение</p>
+      <div class="social-links">
+        <a href="#"><i class="icon-telegram">Telegram</i></a>
+        <a href="#"><i class="icon-instagram">Instagram</i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

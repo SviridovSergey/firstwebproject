@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Печатаем настроение</title>
+  <link rel="stylesheet" href="../css/main_page.css"/>
+  <link rel="stylesheet" href="../css/services_page.css"/>
+  <link rel="stylesheet" href="../css/usefull_page.css"/>
+  <link rel="stylesheet" href="../css/calculator_page.css"/>
+  <link rel="stylesheet" href="../backup_pages_css/useful_articles1.css"/>
+  <link rel="stylesheet" href="../css/icons.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js "></script>
+  <script defer src="../js/script.js"></script>
+</head>
+<body>
+
+  <!-- Начальная анимация -->
+  <div id="universe-animation" class="hidden">
+    <video autoplay muted loop>
+      <source src="milky-way.mp4" type="video/mp4">
+    </video>
+    <button id="enter-universe">Погрузиться во вселенную лучших пластиковых карт</button>
+  </div>
+
+  <!-- Верхняя панель -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="logo">
+        <img src="../images/main_page/logo-PinkCard-Studio.svg" alt="Логотип PinkCard studio" />
+      </div>
+      <div class="contact-info">
+        <a href="#" class="icon-link">
+          <span>+7 (918) 852 83 65</span>
+        </a>
+        <a href="#">
+          <i class="icon-telegram"></i>
+        </a>
+        <button class="action-btn calculate">Расчитать стоимость сайта</button>
+        <button class="action-btn telegram">Подписаться на Telegram канал</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Нижняя панель меню -->
+  <nav class="main-menu">
+    <div class="container">
+      <ul>
+        <li><a href="../html_pages/index.html">Главная</a></li>
+        <li><a href="../html_pages/services.html">Портфолио</a></li>
+        <li><a href="../html_pages/useful.html">Отзывы</a></li>
+        <li><a href="../html_pages/calculator.html">Стоимость</a></li>
+        <li><a href="../html_pages/useful_articles.html">Полезные статьи</a></li>
+        <li><a href="#">Тайная комната</a></li>
+        <li><a href="../html_pages/contact.html">Контакты</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="articles-section">
+    <div class="container">
+        <h2>SEO-продвижение пролстыми словами:
+            что это такое и как работает?
+        </h2>
+        <p>
+            SEO-продвижение — это способ сделать сайт заметным в Яндексе и Google, чтобы его находили именно ваши клиенты. Оно важно для каждого, кто хочет продавать товары, оказывать услуги, рассказывать о своих проектах или просто развивать личный бренд. SEO помогает сайту выйти в топ поисковых систем, сделать его более понятным, привлекательным и удобным.
+            Ключевые слова, которые подбираются для SEO, позволяют попасть в нужные поисковые запросы. Техническая оптимизация ускоряет загрузку сайта, исправляет ошибки и улучшает адаптацию под телефоны. Внутренние ссылки связывают страницы между собой, помогая пользователю находить нужную информацию. Внешние ссылки повышают доверие поисковых систем.
+            Ниже вы найдёте удобный блок с определениями всех этих важных терминов. Мы специально составили его простым языком, чтобы каждый мог разобраться, что такое «SEO», «ключевые слова», «линкбилдинг», «сниппет» и другие понятия.
+            Важно помнить: самостоятельная настройка SEO может привести к ложным ожиданиям и некачественным результатам. Поэтому лучше доверить эту работу специалистам — мы поможем сделать сайт успешным!
+        </p>
+    </div>
+  </section>
+
+  <!-- Секция Вопросы и ответы -->
+  <section class="services-offered">
+    <div class="container">
+      <h2>Вопросы и ответы</h2>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Что такое SEO?</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            SEO — это поисковая оптимизация. Говоря проще, это комплекс мер, которые помогают сайту быть выше в поисковой выдаче, чтобы привлекать клиентов.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Зачем нужны ключевые слова?</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Ключевые слова — это слова и фразы, которые набирают в поиске. Например: «купить пиццу с доставкой». Эти слова нужны, чтобы поисковики поняли, о чём ваш сайт.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Интернет-магазин — для онлайн-продаж</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Поможем открыть магазин, где всё просто и удобно — от оформления витрины до онлайн-оплаты. Интернет-магазин под ключ — продажи без хлопот.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Что значит оптимизация контента</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Это тексты, фото, видео, которые делают сайт полезным и интересным для клиентов — с учётом ключевых слов.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Техническая оптимизация - это про что?</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Это ускорение работы сайта, исправление ошибок, адаптация под телефоны — всё, чтобы сайт «нравился» поисковикам.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Внутренние ссылки - зачем они?</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Это ссылки между страницами одного сайта. Они помогают людям находить нужную информацию и улучшают SEO.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Внешние ссылки - что это?</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Это ссылки с других сайтов, которые «рекомендуют» ваш сайт. Чем больше таких ссылок, тем выше доверие поисковых систем.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>А что такое аналитика?</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Это сбор данных о посетителях: кто заходит, что смотрит. Это помогает понять, что на сайте работает, а что — нет.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="">
+    <div class="container">
+        <h2>Полезные термины</h2>
+        <p>
+            Мета-теги — заголовки и описания сайта, которые видны в поиске.<br>
+            Юзабилити — насколько удобно пользоваться сайтом.<br>
+            Сниппет — текстовый блок под заголовком сайта в поиске.<br>
+            Мобильная адаптация — сайт удобно открывается на телефоне.<br>
+            Поведенческие факторы — как ведут себя посетители на сайте.<br>
+            <br>
+            <br>
+            <br>
+
+            Самостоятельная SEO-настройка может привести к ложным ожиданиям: сайт вроде бы «оптимизирован», но заявок всё равно нет.
+            Почему? Потому что SEO — это не набор случайных советов, а комплексная работа, в которой важна каждая деталь.
+            Доверьте SEO-настройку специалистам, чтобы получить реальный результат — клиентов, а не пустые клики.
+        </p>
+    </div>
+  </section>
+
+  <!-- Контактные ссылки -->
+  <section class="contact-links-section">
+    <div class="container">
+      <h2>Закажите разработку сайта под ключ — оставьте заявку прямо сейчас!</h2>
+      <p>Переходите в удобный для вас мессенджер или сразу звоните!</p>
+      <div class="contact-links">
+        <a href="#" class="contact-link whatsapp">
+          <i class="icon-whatsapp"></i>
+          Написать в WhatsApp
+        </a>
+        <a href="#" class="contact-link telegram">
+          <i class="icon-telegram"></i>
+          Написать в Telegram
+        </a>
+        <a href="#" class="contact-link phone">
+          <i class="icon-phone"></i>
+          Позвонить
+        </a>
+        <a href="#" class="contact-link telegram-channel">
+          <i class="icon-telegram"></i>
+          Подписаться на Telegram канал
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Обсудим ваш проект -->
+  <section class="contact-section">
+    <div class="container">
+      <h2>Обсудим ваш проект</h2>
+      <p>Нужен сайт или у вас остались вопросы? Оставьте свои контакты в форме, я свяжусь с вами в самое ближайшее время.</p>
+      <div class="contact-info">
+        <div class="contact-left">
+          <img src="phone-icon.svg" alt="Телефон">
+          <a href="tel:+79188528365">+7 (918) 852 83 65</a>
+          <div class="social-links">
+            <a href="#"><i class="icon-telegram"></i></a>
+            <a href="#"><i class="icon-whatsapp"></i></a>
+          </div>
+        </div>
+        <form id="main-contact-form">
+          <input type="text" placeholder="Ваше имя*" required>
+          <input type="tel" placeholder="Телефон*" required>
+          <textarea placeholder="Сообщение" required></textarea>
+          <button type="submit" class="btn primary">Отправить сообщение</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Подвал -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Печатаем настроение</p>
+      <div class="social-links">
+        <a href="#"><i class="icon-telegram">Telegram</i></a>
+        <a href="#"><i class="icon-instagram">Instagram</i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Печатаем настроение</title>
-  <link rel="stylesheet" href="../css/main_page.css" />
-  <link rel="stylesheet" href="../css/services_page.css" />
+  <link rel="stylesheet" href="../css/main_page.css"/>
+  <link rel="stylesheet" href="../css/services_page.css"/>
   <link rel="stylesheet" href="../css/usefull_page.css"/>
-  <link rel="stylesheet" href="../css/icons.css" />
+  <link rel="stylesheet" href="../css/calculator_page.css"/>
+  <link rel="stylesheet" href="../css/icons.css"/>
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js "></script>
   <script defer src="../js/script.js"></script>
 </head>
@@ -48,12 +49,243 @@
         <li><a href="../html_pages/services.html">Портфолио</a></li>
         <li><a href="../html_pages/useful.html">Отзывы</a></li>
         <li><a href="../html_pages/calculator.html">Стоимость</a></li>
-        <li><a href="#">Полезные статьи</a></li>
+        <li><a href="../html_pages/useful_articles.html">Полезные статьи</a></li>
         <li><a href="#">Тайная комната</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a href="../html_pages/contact.html">Контакты</a></li>
       </ul>
     </div>
   </nav>
+
+  <!-- Главный контент -->
+  <main class="content-section">
+    <!-- Секция с заголовком и описанием -->
+    <section class="pricing-header">
+      <div class="container">
+        <h1>Сколько стоит сайт и продвижение?</h1>
+        <p>Никаких скрытых цифр — только честные цены и понятные тарифы. Смотрите, выбирайте, а если нужно — обсудим детали проекта и подберём индивидуальное решение!</p>
+      </div>
+    </section>
+
+    <!-- Секция с ценами -->
+    <section class="pricing-tables">
+      <div class="container">
+        <div class="pricing-grid">
+          <!-- Лендинг -->
+          <div class="pricing-card">
+            <h2>Лендинг</h2>
+            <hr>
+            <p>от 25 000 ₽</p>
+            <p>Идеально для:</p>
+            <ul>
+              <li>Запуска новой услуги, товара</li>
+              <li>Захвата аудитории через рекламу</li>
+              <li>Презентации продукта или бренда</li>
+            </ul>
+            <button class="btn primary">ЗАКАЗАТЬ ЛЕНДИНГ</button>
+          </div>
+
+          <!-- Корпоративный сайт -->
+          <div class="pricing-card">
+            <h2>Корпоративный сайт</h2>
+            <hr>
+            <p>от 40 000 ₽</p>
+            <p>Подходит для:</p>
+            <ul>
+              <li>Компаний, которые хотят показать серьёзность и открытость</li>
+              <li>Представительства в интернете, поиска новых клиентов</li>
+            </ul>
+            <button class="btn primary">СОЗДАТЬ КОРПОРАТИВНЫЙ САЙТ</button>
+          </div>
+
+          <!-- Интернет-магазин -->
+          <div class="pricing-card">
+            <h2>Интернет-магазин</h2>
+            <hr>
+            <p>от 50 000 ₽</p>
+            <p>Идеально для:</p>
+            <ul>
+              <li>Продажи товаров онлайн</li>
+              <li>Увеличения охвата и дохода</li>
+            </ul>
+            <button class="btn primary">ЗАКАЗАТЬ ИНТЕРНЕТ-МАГАЗИН</button>
+          </div>
+
+          <!-- Промо-сайт / сайт-портфолио -->
+          <div class="pricing-card">
+            <h2>Промо-сайт / сайт-портфолио</h2>
+            <hr>
+            <p>от 30 000 ₽</p>
+            <p>Подходит для:</p>
+            <ul>
+              <li>Творческих специалистов: фотографов, дизайнеров, художников</li>
+              <li>Продвижения личного бренда</li>
+            </ul>
+            <button class="btn primary">ЗАКАЗАТЬ ПРОМО-САЙТ</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Дополнительные услуги -->
+    <section class="additional-services">
+      <div class="container">
+        <h2>Дополнительные услуги</h2>
+        <div class="services-grid">
+          <!-- SEO-настройка и оптимизация -->
+          <div class="service-card">
+            <h3>SEO-настройка и оптимизация</h3>
+            <hr>
+            <p>от 10 000 ₽</p>
+            <p>Для чего? Чтобы ваш сайт был заметен в поиске и привлекал новых клиентов!</p>
+            <button class="btn primary">ОПТИМИЗИРОВАТЬ SEO</button>
+          </div>
+
+          <!-- Подключение Яндекс-сервисов -->
+          <div class="service-card">
+            <h3>Подключение Яндекс-сервисов</h3>
+            <hr>
+            <p>от 20 000 ₽</p>
+            <p>Зачем? Чтобы реклама работала на вас и каждый рубль приносил результат.</p>
+            <button class="btn primary">ПОДКЛЮЧИТЬ ЯНДЕКС-РЕКЛАМУ</button>
+          </div>
+
+          <!-- Разработка чат-ботов и Telegram-каналов -->
+          <div class="service-card">
+            <h3>Разработка чат-ботов и Telegram-каналов</h3>
+            <hr>
+            <p>от 15 000 ₽</p>
+            <p>Преимущества: Автоматизируйте общение с клиентами и оставайтесь на связи 24/7.</p>
+            <button class="btn primary">ЗАКАЗАТЬ УСЛУГУ</button>
+          </div>
+
+          <!-- Копирайтинг и написание текстов -->
+          <div class="service-card">
+            <h3>Копирайтинг и написание текстов</h3>
+            <hr>
+            <p>от 500 ₽ за 1000 знаков</p>
+            <p>Подходит для:</p>
+            <ul>
+              <li>Творческих специалистов: фотографов, дизайнеров, художников</li>
+            </ul>
+            <button class="btn primary">ЗАКАЗАТЬ ТЕКСТЫ</button>
+          </div>
+
+          <!-- Создание изображений и графики -->
+          <div class="service-card">
+            <h3>Создание изображений и графики</h3>
+            <hr>
+            <p>от 500 ₽</p>
+            <p>Преимущество: Визуал, который выделяет ваш бренд среди конкурентов.</p>
+            <button class="btn primary">ЗАКАЗАТЬ ГРАФИКУ</button>
+          </div>
+
+          <!-- Редизайн и доработка сайта -->
+          <div class="service-card">
+            <h3>Редизайн и доработка сайта</h3>
+            <hr>
+            <p>от 10 000 ₽</p>
+            <p>Зачем? Чтобы сайт выглядел современно и приносил больше заявок.</p>
+            <button class="btn primary">ЗАКАЗАТЬ РЕДИЗАЙН</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="services-offered">
+    <div class="container">
+      <h2>Что мы можем сделать для вас?</h2>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Лендинг — чтобы рассказать о вас просто и понятно</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Собираем лендинг так, чтобы он зацепил и вовлёк. Вы получаете стильный сайт, который помогает продавать, а не пылиться в интернете.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Корпоративный сайт — для имиджа и уверенности</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Сайт, который поднимет ваш авторитет и покажет, что вы серьёзный игрок на рынке. Стильно, удобно, без лишнего пафоса.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Интернет-магазин — для онлайн-продаж</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Поможем открыть магазин, где всё просто и удобно — от оформления витрины до онлайн-оплаты. Интернет-магазин под ключ — продажи без хлопот.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Подключение Яндекс-рекламы, Яндекс Метрики и Яндекс Бизнес</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Запустим Яндекс Директ для новых клиентов, Яндекс Метрику — чтобы видеть результат, и Яндекс Бизнес — для ещё большего охвата.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Разработка чат-ботов и телеграм-каналов</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Создадим чат-бота, который будет работать за вас — собирать заявки, консультировать клиентов. Плюс поможем с телеграм-каналом, чтобы вы были на связи с аудиторией.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Настройка SEO и адаптация под голосовой поиск</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Сделаем так, чтобы вас находили не только люди, но и голосовые ассистенты. SEO-настройка и работа с голосовым поиском — чтобы быть первым в выдаче.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Копирайтинг — тексты, которые цепляют</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Надо написать текст? Легко! Копирайтер сделает так, чтобы каждый заголовок цеплял, а текст продавал.
+          </p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-header">
+          <span>Создание изображений — картинки, которые привлекают</span>
+          <button class="toggle-button">+</button>
+        </div>
+        <div class="service-description hidden">
+          <p>
+            Мы сами подбираем и обрабатываем картинки для вашего сайта — яркие, стильные и понятные. Чтобы визуал тоже продавал.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Контактные ссылки -->
   <section class="contact-links-section">
     <div class="container">
@@ -79,8 +311,6 @@
       </div>
     </div>
   </section>
-
-  
 
   <!-- Обсудим ваш проект -->
   <section class="contact-section">

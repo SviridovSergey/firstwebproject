@@ -139,3 +139,42 @@ reviews.forEach(review => {
     review.style.transform = 'scale(1)';
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Smooth scrolling for internal links
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 60, // Adjust for header height
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Animation for sections
+  const sections = document.querySelectorAll('.content-section > section');
+  const options = {
+    rootMargin: '-200px 0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+      } else {
+        entry.target.classList.remove('animate-in');
+      }
+    });
+  }, options);
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});

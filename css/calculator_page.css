@@ -50,10 +50,16 @@ body {
 }
 
 .logo img {
-  width: 50px;
-  height: 50px;
+  width: 150px;
+  height: auto;
   vertical-align: middle;
-  margin-right: 10px;
+}
+
+.top-bar .logo img,
+.top-bar .contact-info,
+.main-menu ul {
+  animation: fadeIn 0.5s ease-in-out;
+  animation-delay: 0.2s;
 }
 
 .logo span {
@@ -279,4 +285,147 @@ p {
 .contact-link:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Pricing Section */
+.pricing-header {
+  background-color: black; /* Reddish background */
+  color: white;
+  padding: 20px 0;
+}
+
+.pricing-tables {
+  background-color: #f9f9f9; /* Light beige background */
+  padding: 20px 0;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.pricing-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+
+.pricing-card hr {
+  border-top: 2px solid #e74c3c; /* Reddish line */
+  margin: 10px 0;
+}
+
+.pricing-card button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pricing-card button:hover {
+  background-color: #cf3c2b;
+}
+
+.additional-services {
+  background-color: #ccc; /* Light beige background */
+  padding: 20px 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card hr {
+  border-top: 2px solid #e74c3c; /* Reddish line */
+  margin: 10px 0;
+}
+
+.service-card button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.service-card button:hover {
+  background-color: #cf3c2b;
+}
+
+/* Секция "Почему цены могут меняться?" */
+.services-offered {
+  padding: 40px 0;
+}
+
+.service-item {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f7f7f7;
+  cursor: pointer;
+}
+
+.service-header span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.toggle-button {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.toggle-button:hover {
+  color: #e74c3c;
+}
+
+.service-description {
+  padding: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.hidden {
+  display: none;
 }
