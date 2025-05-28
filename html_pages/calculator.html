@@ -3,184 +3,119 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Наши услуги</title>
-  <link rel="stylesheet" href="../css/calculator_page.css" />
-  <link rel="stylesheet" href="../css/icons.css">
-  <script src="../js/script.js" defer></script>
+  <title>Печатаем настроение</title>
+  <link rel="stylesheet" href="../css/main_page.css" />
+  <link rel="stylesheet" href="../css/services_page.css" />
+  <link rel="stylesheet" href="../css/usefull_page.css"/>
+  <link rel="stylesheet" href="../css/icons.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js "></script>
+  <script defer src="../js/script.js"></script>
 </head>
 <body>
 
-<!-- Верхняя панель -->
-<div class="top-bar">
-  <div class="container">
-    <div class="top-bar-social">
-      <a href="https://t.me/whiterabbitcards "><i class="icon icon-telegram" aria-hidden="true"></i></a>
-      <a href="https://www.instagram.com/w.rabbit.card/ "><i class="icon-instagram"></i></a>
-      <a href="https://vk.com/whiterabbitcard "><i class="icon-vk"></i></a>
-      <a href="https://www.youtube.com/channel/UC4grkfRVyrmr-Pn9gVZBu6A "><i class="icon-youtube"></i></a>
-      <a href="https://dzen.ru/whiterabbitcards "><i class="icon-dzen"></i></a>
-    </div>
-    <div class="top-bar-contact">
-      <span><i class="icon-envelope"></i> whiterrabbitcard@mail.ru</span>
-      <span><i class="icon-phone"></i> +7 923 293 2218</span>
+  <!-- Начальная анимация -->
+  <div id="universe-animation" class="hidden">
+    <video autoplay muted loop>
+      <source src="milky-way.mp4" type="video/mp4">
+    </video>
+    <button id="enter-universe">Погрузиться во вселенную лучших пластиковых карт</button>
+  </div>
+
+  <!-- Верхняя панель -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="logo">
+        <img src="../images/main_page/logo-PinkCard-Studio.svg" alt="Логотип PinkCard studio" />
+      </div>
+      <div class="contact-info">
+        <a href="#" class="icon-link">
+          <span>+7 (918) 852 83 65</span>
+        </a>
+        <a href="#">
+          <i class="icon-telegram"></i>
+        </a>
+        <button class="action-btn calculate">Расчитать стоимость сайта</button>
+        <button class="action-btn telegram">Подписаться на Telegram канал</button>
+      </div>
     </div>
   </div>
-</div>
 
-<header class="site-header">
-  <div class="container">
-    <a href="index.html" class="logo">
-      <img src="logo-white-rabbit.svg" alt="Логотип">
-      <span>WhiteRabbit</span>
-      <p class="tagline">Печатаем настроение</p>
-    </a>
-    <nav class="navbar">
-      <ul class="menu">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="services.html">Услуги</a></li>
-        <li><a href="calculator.html">Калькулятор</a></li>
-        <li><a href="useful.html">Полезное</a></li>
-        <li><a href="contact.html">Контакты</a></li>
+  <!-- Нижняя панель меню -->
+  <nav class="main-menu">
+    <div class="container">
+      <ul>
+        <li><a href="../html_pages/index.html">Главная</a></li>
+        <li><a href="../html_pages/services.html">Портфолио</a></li>
+        <li><a href="../html_pages/useful.html">Отзывы</a></li>
+        <li><a href="../html_pages/calculator.html">Стоимость</a></li>
+        <li><a href="#">Полезные статьи</a></li>
+        <li><a href="#">Тайная комната</a></li>
+        <li><a href="#">Контакты</a></li>
       </ul>
-    </nav>
-  </div>
-</header>
-
-<main class="main-content">
-  <section class="calculator-section">
-    <h1>Собери свою карту</h1>
-    <p>Рассчитывайте стоимость самостоятельно или с помощью нашего специалиста, позвонив по бесплатному телефону: 7 129 123 45 12</p>
-
-    <div class="calculator-container">
-      <div class="card-preview">
-        <div class="card-side card-front">
-          <div class="card-image">
-            <img src="placeholder-card-front.jpg" alt="фото карточки спереди">
-          </div>
-        </div>
-        <div class="card-side card-back">
-          <div class="card-image">
-            <img src="placeholder-card-back.jpg" alt="фото карточки сзади">
-          </div>
-        </div>
+    </div>
+  </nav>
+  <!-- Контактные ссылки -->
+  <section class="contact-links-section">
+    <div class="container">
+      <h2>Закажите разработку сайта под ключ — оставьте заявку прямо сейчас!</h2>
+      <p>Переходите в удобный для вас мессенджер или сразу звоните!</p>
+      <div class="contact-links">
+        <a href="#" class="contact-link whatsapp">
+          <i class="icon-whatsapp"></i>
+          Написать в WhatsApp
+        </a>
+        <a href="#" class="contact-link telegram">
+          <i class="icon-telegram"></i>
+          Написать в Telegram
+        </a>
+        <a href="#" class="contact-link phone">
+          <i class="icon-phone"></i>
+          Позвонить
+        </a>
+        <a href="#" class="contact-link telegram-channel">
+          <i class="icon-telegram"></i>
+          Подписаться на Telegram канал
+        </a>
       </div>
-
-      <div class="form-container">
-        <!-- Левая колонка -->
-        <div class="form-column">
-          <label for="quantity">Количество</label>
-          <select id="quantity">
-              <option value="50">50 шт</option>
-              <option value="100">100 шт</option>
-              <option value="200">200 шт</option>
-              <option value="300">300 шт</option>
-              <option value="400">400 шт</option>
-              <option value="500">500 шт</option>
-              <option value="1000">1000 шт</option>
-          </select>
-
-          <label for="plastic-type">Тип пластика</label>
-          <select id="plastic-type">
-              <option value="white-standard">Белый стандартный</option>
-              <option value="black">Черный</option>
-              <option value="transparent">Прозрачный</option>
-              <option value="color">Цветной</option>
-              <option value="gold">Золотой</option>
-              <option value="silver">Серебрянный</option>
-          </select>
-
-          <label for="hole">Отверстие</label>
-          <select id="hole">
-              <option value="none">Нет</option>
-              <option value="oblong">Продолговатое</option>
-              <option value="round">Круглое</option>
-          </select>
-
-          <label for="lamination">Ламинация</label>
-          <select id="lamination">
-              <option value="standard">Стандарт</option>
-              <option value="gloss">Глянец</option>
-              <option value="matte">Матовая</option>
-              <option value="rough-lamination">Шероховатая ламинация</option>
-              <option value="textured-lamination">Фактурная ламинация</option>
-          </select>
-        </div>
-
-        <!--Правая колонка-->
-        <div class="form-column">
-          <label for="front-numbering">Нумерация</label>
-          <select id="front-numbering">
-            <option value="none">Нет</option>
-            <option value="printed">Печатная</option>
-            <option value="embossment">Эмбоссирование</option>
-          </select>
-
-          <label for="contactless-chip">Бесконтактный чип</label>
-          <select id="contactless-chip">
-            <option value="none">Нет</option>
-            <option value="yes">Да</option>
-          </select>
-
-          <h2>Оборотная сторона</h2>
-          <label for="back-barcode">Штрих-код</label>
-          <select id="back-barcode">
-            <option value="none">Нет</option>
-            <option value="yes">Да</option>
-          </select>
-
-          <label for="back-magnetic-strip">Магнитная полоса</label>
-          <select id="back-magnetic-strip">
-            <option value="none">Нет</option>
-            <option value="yes">Да</option>
-          </select>
-
-          <label for="back-qr-code">QR-code</label>
-          <select id="back-qr-code">
-            <option value="none">Нет</option>
-            <option value="yes">Да</option>
-          </select>
-
-          <label for="back-magnet">Магнит</label>
-          <select id="back-magnet">
-            <option value="none">Нет</option>
-            <option value="yes">Да</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Подсчет стоимости -->
-      <div class="price-section">
-        <div class="price-item">
-          <span>Цена за штуку</span>
-          <span id="price-per-unit">0 ₽</span>
-        </div>
-        <div class="price-item">
-          <span>Сумма</span>
-          <span id="total-price">0 ₽</span>
-        </div>
-      </div>
-
-      <!-- Форма заказа -->
-      <form class="order-form">
-        <input type="text" placeholder="Имя" required>
-        <input type="tel" placeholder="Телефон" required>
-        <button type="submit">Заказать карты</button>
-      </form>
     </div>
   </section>
-</main>
 
-<footer class="site-footer">
-  <div class="container">
-    <p>© 2025 Печатаем настроение</p>
-    <div class="social-links">
-      <a href="https://t.me/whiterabbitcards " target="_blank" rel="noopener noreferrer"><i class="icon-telegram">Telegram</i></a>
-      <a href="https://www.instagram.com/w.rabbit.card/ " target="_blank" rel="noopener noreferrer"><i class="icon-instagram">Instagram</i></a>
-      <a href="https://vk.com/whiterabbitcard " target="_blank" rel="noopener noreferrer"><i class="icon-vk">VK</i></a>
-      <a href="https://www.youtube.com/channel/UC4grkfRVyrmr-Pn9gVZBu6A " target="_blank" rel="noopener noreferrer"><i class="icon-youtube">Youtube</i></a>
-      <a href="https://dzen.ru/whiterabbitcards " target="_blank" rel="noopener noreferrer"><i class="icon-dzen">Dzen</i></a>
+  
+
+  <!-- Обсудим ваш проект -->
+  <section class="contact-section">
+    <div class="container">
+      <h2>Обсудим ваш проект</h2>
+      <p>Нужен сайт или у вас остались вопросы? Оставьте свои контакты в форме, я свяжусь с вами в самое ближайшее время.</p>
+      <div class="contact-info">
+        <div class="contact-left">
+          <img src="phone-icon.svg" alt="Телефон">
+          <a href="tel:+79188528365">+7 (918) 852 83 65</a>
+          <div class="social-links">
+            <a href="#"><i class="icon-telegram"></i></a>
+            <a href="#"><i class="icon-whatsapp"></i></a>
+          </div>
+        </div>
+        <form id="main-contact-form">
+          <input type="text" placeholder="Ваше имя*" required>
+          <input type="tel" placeholder="Телефон*" required>
+          <textarea placeholder="Сообщение" required></textarea>
+          <button type="submit" class="btn primary">Отправить сообщение</button>
+        </form>
+      </div>
     </div>
-  </div>
-</footer>
+  </section>
+
+  <!-- Подвал -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Печатаем настроение</p>
+      <div class="social-links">
+        <a href="#"><i class="icon-telegram">Telegram</i></a>
+        <a href="#"><i class="icon-instagram">Instagram</i></a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
