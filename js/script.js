@@ -122,3 +122,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Простой скрипт для анимации кнопки "Рассчитать стоимость сайта"
+document.querySelector('.btn:nth-child(2)').addEventListener('click', function() {
+  alert('Вы нажали кнопку "Рассчитать стоимость сайта". Здесь можно добавить логику для перехода на форму или модальное окно.');
+});
+
+// Анимация отзыва при наведении
+const reviews = document.querySelectorAll('.review');
+reviews.forEach(review => {
+  review.addEventListener('mouseenter', () => {
+    review.style.transform = 'scale(1.05)';
+  });
+
+  review.addEventListener('mouseleave', () => {
+    review.style.transform = 'scale(1)';
+  });
+});

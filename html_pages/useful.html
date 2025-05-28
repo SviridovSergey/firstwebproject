@@ -5,118 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Печатаем настроение</title>
   <link rel="stylesheet" href="../css/main_page.css" />
+  <link rel="stylesheet" href="../css/services_page.css" />
+  <link rel="stylesheet" href="../css/usefull_page.css"/>
   <link rel="stylesheet" href="../css/icons.css" />
-  <script src="../js/script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js "></script>
+  <script defer src="../js/script.js"></script>
 </head>
 <body>
 
-<!-- Верхняя панель -->
-<div class="top-bar">
-  <div class="container">
-    <div class="top-bar-social">
-      <a href="#"><i class="icon-telegram"></i></a>
-      <a href="#"><i class="icon-instagram"></i></a>
-      <a href="#"><i class="icon-vk"></i></a>
-      <a href="#"><i class="icon-youtube"></i></a>
-      <a href="#"><i class="icon-plus"></i></a>
-    </div>
-    <div class="top-bar-contact">
-      <span><i class="icon-envelope"></i> whiterrabbitcard@mail.ru</span>
-      <span><i class="icon-phone"></i> +7 923 293 2218</span>
-    </div>
+  <!-- Начальная анимация -->
+  <div id="universe-animation" class="hidden">
+    <video autoplay muted loop>
+      <source src="milky-way.mp4" type="video/mp4">
+    </video>
+    <button id="enter-universe">Погрузиться во вселенную лучших пластиковых карт</button>
   </div>
-</div>
 
-<!-- Шапка -->
-<header class="site-header">
-  <div class="container">
-    <a href="index.html" class="logo">
-      <img src="logo-white-rabbit.png" alt="Логотип">
-      <span>WhiteRabbit</span>
-      <p class="tagline">Печатаем настроение</p>
-    </a>
-    <nav class="navbar">
-      <ul class="menu">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="services.html">Услуги</a></li>
-        <li><a href="calculator.html">Калькулятор</a></li>
-        <li><a href="useful.html">Полезное</a></li>
-        <li><a href="contact.html">Контакты</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<main class="main-content">
-  <section class="blog-section">
+  <!-- Верхняя панель -->
+  <div class="top-bar">
     <div class="container">
-      <h1>Блог</h1>
-      <p>Полезная информация, которая вам поможет разобраться в нюансах печати</p>
-      
-      <!-- Блок с постами -->
-      <div class="post-container">
-        <div class="post">
-          <h2>Не единой жалобы. Как нам это удается?</h2>
-          <p>
-            6 лет работы и не единой жалобы 🥳 Как нам это удается? На самом деле, легко. Главный секрет в том, что мы относимся к заказчикам так, как хотели бы, чтобы относились к нам. Простая истина, но она работает 🤔
-            
-            Мы не ставим себе цель заработать максимум денег с заказчика. Мы ставим цель выполнить задание так, чтобы заказчик был доволен, и наши визитки стали...
-          </p>
-          <div class="post-meta">
-            <a href="#" class="read-more">Подробнее</a>
-            <span class="date">Декабрь.19 2022</span>
-          </div>
-        </div>
-        
-        <div class="post">
-          <h2>«Встречают по одежке, провожают по уму»</h2>
-          <p>
-            «Встречают по одежке, провожают по уму» 🧐 Эта мысль работает всегда. Какие бы ни были у вас классные специалисты, какие бы ни были уникальные услуги вы бы ни предоставляли, сначала будут смотреть на обертку.
-            
-            Представьте. Вы ищете компанию, которая окажет вам определенную услугу, и выбираете между двумя равноценными. Представитель одной компании на...
-          </p>
-          <div class="post-meta">
-            <a href="#" class="read-more">Подробнее</a>
-            <span class="date">Декабрь.19 2022</span>
-          </div>
-        </div>
-        
-        <div class="post">
-          <h2>Как считаете, что ценнее — вещи или эмоции?</h2>
-          <p>
-            Как считаете, что ценнее — вещи или эмоции? Очередная безделушка или уверенность в себе от новой прически? Сковородка или чувство легкости, гармонии от сеанса массажа? Сервиз на 12 персон или радость от проведенного всей семьей выходного в развлекательном центре? Мы думаем, что эмоции 😊 И уверены, что ваши клиенты с нами согласны 💯 И совсем скоро...
-          </p>
-          <div class="post-meta">
-            <a href="#" class="read-more">Подробнее</a>
-            <span class="date">Декабрь.19 2022</span>
-          </div>
-        </div>
+      <div class="logo">
+        <img src="../images/main_page/logo-PinkCard-Studio.svg" alt="Логотип PinkCard studio" />
       </div>
-    </div>
-  </section>
-</main>
-
-<!-- Подвал -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-social">
-        <a href="#"><i class="icon-telegram"></i></a>
-        <a href="#"><i class="icon-instagram"></i></a>
-        <a href="#"><i class="icon-vk"></i></a>
-        <a href="#"><i class="icon-youtube"></i></a>
-        <a href="#"><i class="icon-plus"></i></a>
+      <div class="contact-info">
+        <a href="#" class="icon-link">
+          <span>+7 (918) 852 83 65</span>
+        </a>
+        <a href="#">
+          <i class="icon-telegram"></i>
+        </a>
+        <button class="action-btn calculate">Расчитать стоимость сайта</button>
+        <button class="action-btn telegram">Подписаться на Telegram канал</button>
       </div>
-      <div class="footer-contact">
-        <span><i class="icon-envelope"></i> whiterrabbitcard@mail.ru</span>
-        <span><i class="icon-phone"></i> +7 923 293 2218</span>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2023 Мастерская печати «White Rabbit»</p>
     </div>
   </div>
-</footer>
+
+  <!-- Нижняя панель меню -->
+  <nav class="main-menu">
+    <div class="container">
+      <ul>
+        <li><a href="../html_pages/index.html">Главная</a></li>
+        <li><a href="../html_pages/services.html">Портфолио</a></li>
+        <li><a href="../html_pages/useful.html">Отзывы</a></li>
+        <li><a href="#">Стоимость</a></li>
+        <li><a href="#">Полезные статьи</a></li>
+        <li><a href="#">Тайная комната</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="client-reviews">
+    <div class="container">
+      <h2>Что говорят наши клиенты</h2>
+      <p>Реальные отзывы о создании сайтов,SEO, и запуске рекламы </p>
+      <div class="buttons">
+        <button class="btn">Смотреть кейсы</button>
+        <button class="btn">Рассчитать стоимость сайта</button>
+      </div>
+      <div class="reviews">
+        <div class="review">
+          <img src="../images/usefull_page/review1.svg" alt="Отзыв 1">
+        </div>
+        <div class="review">
+          <img src="../images/usefull_page/review2.svg" alt="Отзыв 2">
+        </div>
+        <div class="review">
+          <img src="../images/usefull_page/review3.svg" alt="Отзыв 3">
+        </div>
+        <div class="review">
+          <img src="../images/usefull_page/review4.svg" alt="Отзыв 4">
+        </div>
+        <div class="review">
+          <img src="../images/usefull_page/review5.svg" alt="Отзыв 5">
+        </div>
+        <div class="review">
+          <img src="../images/usefull_page/review6.svg" alt="Отзыв 6">
+        </div>
+        <div class="review">
+          <img src="../images/usefull_page/review7.svg" alt="Отзыв 7">
+        </div>
+        <div class="review">
+          <img src="../images/usefull_page/review8.svg" alt="Отзыв 8">
+        </div>
+        <div class="review">
+          <img src="../images/usefull_page/review9.svg" alt="Отзыв 9">
+        </div>
+        <div class="rating">
+          <img src="../images/usefull_page/google-rating.svg" alt="Рейтинг Google">
+          <span>5.0 из 5</span>
+          <span>На основе 20 оценок </span>
+        </div>
+      </div>
+    </div>
+  
+  </section>
 
 </body>
 </html>
