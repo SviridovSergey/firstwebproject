@@ -66,3 +66,31 @@
             </div>
         </section>
 /* use !important to prevent issues with browser extensions that change fonts */ - icons.
+
+.secret-room {
+  background-color: #f9f9f9; /* Пастельный фон */
+}
+
+.secret-room-header {
+  background-color: #1a1a1a; /* Темно-синий фон */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.secret-room-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 300px;
+}
+
+.prizes-section {
+  border: 2px solid red; /* Красная рамка */
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.secret-room h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
