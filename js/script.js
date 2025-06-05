@@ -190,3 +190,88 @@ document.querySelectorAll('.tab-btn').forEach(button => {
     document.querySelector(`.tab[data-category="${tabId}"]`).classList.add('active');
   });
 });
+
+const quizData = [
+  {
+    question: "Какой из этих языков используется для верстки?",
+    a: "HTML",
+    b: "CSS",
+    c: "JavaScript",
+    correct: "a"
+  },
+  {
+    question: "Какой из этих языков отвечает за стили сайта?",
+    a: "HTML",
+    b: "CSS",
+    c: "Python",
+    correct: "b"
+  },
+  {
+    question: "Что такое Tilda?",
+    a: "Конструктор сайтов",
+    b: "Система управления контентом",
+    c: "Язык программирования",
+    correct: "a"
+  }
+];
+
+const quiz = document.getElementById('quiz');
+const answerElements = document.querySelectorAll('.answer');
+const questionElement = document.getElementById('question');
+const a_text = document.getElementById('a_text');
+const b_text = document.getElementById('b_text');
+const c_text = document.getElementById('c_text');
+const submit = document.getElementById('submit');
+
+let currentQuiz = 0;
+let score = 0;
+
+loadQuiz();
+
+function loadQuiz() {
+  deselectAnswers();
+  const currentQuizData = quizData[currentQuiz];
+  questionElement.innerText = currentQuizData.question;
+  a_text.innerText = currentQuizData.a;
+  b_text.innerText = currentQuizData.b;
+  c_text.innerText = currentQuizData.c;
+}
+
+function deselectAnswers() {
+  answerElements.forEach(answerEl => answerEl.checked = false);
+}
+
+function getSelected() {
+  let answer;
+
+  answerElements.forEach(answerEl => {
+    if (answerEl.checked) {
+      answer = answerEl.value; // Получаем значение через value
+    }
+  });
+
+  return answer;
+}
+
+submit.addEventListener('click', () => {
+  const answer = getSelected();
+
+  if (answer) {
+    if (answer === quizData[currentQuiz].correct) {
+      score++;
+    }
+
+    currentQuiz++;
+
+    if (currentQuiz < quizData.length) {
+      loadQuiz();
+    } else {
+      quiz.innerHTML = `
+        <h2>Вы ответили правильно на ${score} из ${quizData.length} вопросов</h2>
+        <button onclick="location.reload()">Пройти снова</button>
+      `;
+    }
+  } else {
+    alert("Пожалуйста, выберите один из вариантов ответа.");
+  }
+});
